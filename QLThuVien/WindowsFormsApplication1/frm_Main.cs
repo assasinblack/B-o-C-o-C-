@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
@@ -78,6 +79,11 @@ namespace WindowsFormsApplication1
             frm_saoluuphuchoi saoluu = new frm_saoluuphuchoi();
             saoluu.saoluu = false;
             saoluu.ShowDialog();
+        }
+
+        private void btnChoMuon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello");
         }
       
     }
