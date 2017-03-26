@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
 
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello");
+            MessageBox.Show("Địt mẹ m khoa");
         }
       
     }
