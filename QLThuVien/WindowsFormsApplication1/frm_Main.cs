@@ -79,6 +79,11 @@ namespace WindowsFormsApplication1
             saoluu.saoluu = false;
             saoluu.ShowDialog();
         }
+
+        private void btnChoMuon_Click(object sender, EventArgs e)
+        {
+
+        }
       
     }
 }
