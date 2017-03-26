@@ -16,11 +16,18 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
+        public bool them = true;
 
         private void frm_capnhat_Load(object sender, EventArgs e)
         {
-
+            if(them==true)
+            {
+                lblPanel.Text = "Thêm Sách";
+            }
+            else
+            {
+                lblPanel.Text = "Sửa Sách";
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

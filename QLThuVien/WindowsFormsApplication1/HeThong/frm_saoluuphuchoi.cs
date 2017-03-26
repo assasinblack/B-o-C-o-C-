@@ -6,7 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using WindowsFormsApplication1.Bussiness;
 
@@ -19,8 +19,8 @@ namespace WindowsFormsApplication1.HeThong
             InitializeComponent();
         }
         string err = "";
-        BLL_SaoLuuPhucHoi bd = new BLL_SaoLuuPhucHoi(cls_Main.duongdanfileketnoi);
-        string databasename = "";
+        BLL_SaoLuuPhucHoi bd = new BLL_SaoLuuPhucHoi(Cls_Main.duongdanfileketnoi);
+        string dataname = "";
         private void tsbsaoluu_Click(object sender, EventArgs e)
         {
             if (saoluu == true)
@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1.HeThong
                     try
                     {
                         //thực hiện thủ tục sao lưu
-                        if (bd.SaoLuu(ref err, txtduongdan.Text))
+                        if (bd.SaoLuu(ref err, txtlayfile.Text))
                         {
                             lblerr.Text = "Đã sao lưu thành công";
                             lblerr.ForeColor = Color.Red;
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1.HeThong
             else
             {
                 //phục hội
-                if (!string.IsNullOrEmpty(txtduongdan.Text))
+                if (!string.IsNullOrEmpty(txtlayfile.Text))
                 {
 
                     lblerr.Text = "Hệ thống đang tiến hành phục hồi...";
@@ -72,8 +72,8 @@ namespace WindowsFormsApplication1.HeThong
                     try
                     {
                         //thực hiện thủ tục sao lưu
-                        databasename = bd.datatbasename;
-                        if (bd.PhucHoi(ref err, txtduongdan.Text, databasename))
+                        databasename
+                        if (bd.PhucHoi(ref err, txtlayfile.Text, databasename))
                         {
                             lblerr.Text = "Đã Phục hồi thành công";
                             lblerr.ForeColor = Color.Red;

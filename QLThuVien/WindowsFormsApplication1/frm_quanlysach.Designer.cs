@@ -63,7 +63,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1162, 112);
+            this.panel1.Size = new System.Drawing.Size(1162, 100);
             this.panel1.TabIndex = 0;
             // 
             // btnSeach
@@ -165,6 +165,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(97, 22);
             this.toolStripButton2.Text = "Sửa Sách";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -187,9 +188,9 @@
             // 
             this.panel2.Controls.Add(this.dgvSach);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 112);
+            this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1162, 537);
+            this.panel2.Size = new System.Drawing.Size(1162, 549);
             this.panel2.TabIndex = 1;
             // 
             // dgvSach
@@ -199,7 +200,7 @@
             this.dgvSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSach.Location = new System.Drawing.Point(0, 0);
             this.dgvSach.Name = "dgvSach";
-            this.dgvSach.Size = new System.Drawing.Size(1162, 537);
+            this.dgvSach.Size = new System.Drawing.Size(1162, 549);
             this.dgvSach.TabIndex = 0;
             // 
             // frm_quanlysach
