@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Bussiness;
 
 namespace WindowsFormsApplication1.HeThong
 {
@@ -16,10 +18,85 @@ namespace WindowsFormsApplication1.HeThong
         {
             InitializeComponent();
         }
-
+        string err = "";
+        BLL_SaoLuuPhucHoi bd = new BLL_SaoLuuPhucHoi(cls_Main.duongdanfileketnoi);
+        string databasename = "";
         private void tsbsaoluu_Click(object sender, EventArgs e)
         {
+            if (saoluu == true)
+            {
+                //saoluu
+                if (!string.IsNullOrEmpty(txtlayfile.Text))
+                {
+                    if (File.Exists(txtlayfile.Text))
+                    {
+                        File.Delete(txtlayfile.Text);
+                    }
+                    lblerr.Text = "Hệ thống đang tiến hành sao lưu...";
+                    Application.DoEvents();
+                    try
+                    {
+                        //thực hiện thủ tục sao lưu
+                        if (bd.SaoLuu(ref err, txtduongdan.Text))
+                        {
+                            lblerr.Text = "Đã sao lưu thành công";
+                            lblerr.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            lblerr.Text = "Sao lưu không thành công" + err;
+                            lblerr.ForeColor = Color.Red;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
 
+                        err = ex.Message;
+                        lblerr.Text = "Sao lưu không thành công" + err;
+                        lblerr.ForeColor = Color.Red;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chưa có đường dẫn file bak", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                //phục hội
+                if (!string.IsNullOrEmpty(txtduongdan.Text))
+                {
+
+                    lblerr.Text = "Hệ thống đang tiến hành phục hồi...";
+                    Application.DoEvents();
+                    try
+                    {
+                        //thực hiện thủ tục sao lưu
+                        databasename = bd.datatbasename;
+                        if (bd.PhucHoi(ref err, txtduongdan.Text, databasename))
+                        {
+                            lblerr.Text = "Đã Phục hồi thành công";
+                            lblerr.ForeColor = Color.Red;
+                        }
+                        else
+                        {
+                            lblerr.Text = "Phục hồi không thành công" + err;
+                            lblerr.ForeColor = Color.Red;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        err = ex.Message;
+                        lblerr.Text = "Phục hồi không thành công" + err;
+                        lblerr.ForeColor = Color.Red;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Chưa có đường dẫn file bak", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         private void tsbthoat_Click(object sender, EventArgs e)

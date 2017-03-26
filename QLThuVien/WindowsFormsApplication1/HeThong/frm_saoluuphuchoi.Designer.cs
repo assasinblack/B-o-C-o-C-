@@ -36,11 +36,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtlayfile = new System.Windows.Forms.TextBox();
             this.btnlayfile = new System.Windows.Forms.Button();
+            this.lblerr = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblerr});
             this.statusStrip1.Location = new System.Drawing.Point(0, 108);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(580, 22);
@@ -119,6 +123,11 @@
             this.btnlayfile.UseVisualStyleBackColor = true;
             this.btnlayfile.Click += new System.EventHandler(this.btnlayfile_Click);
             // 
+            // lblerr
+            // 
+            this.lblerr.Name = "lblerr";
+            this.lblerr.Size = new System.Drawing.Size(0, 17);
+            // 
             // frm_saoluuphuchoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +143,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sao Lưu - Phục Hồi";
             this.Load += new System.EventHandler(this.frm_saoluuphuchoi_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -151,5 +162,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtlayfile;
         private System.Windows.Forms.Button btnlayfile;
+        private System.Windows.Forms.ToolStripStatusLabel lblerr;
     }
 }
