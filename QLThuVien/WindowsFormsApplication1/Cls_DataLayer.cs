@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         private SqlDataAdapter da;
 
 
-        #region các biên thành viên
+        #region member
         private string servername = "";
 
         public string Servername

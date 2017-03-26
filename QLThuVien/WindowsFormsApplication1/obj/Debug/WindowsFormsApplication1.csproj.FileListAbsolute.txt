@@ -54,3 +54,5 @@ C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplicatio
 C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 >>>>>>> origin/master
 C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.HeThong.frm_saoluuphuchoi.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.HeThong.frm_KetNoi.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.HeThong.frm_Login.resources

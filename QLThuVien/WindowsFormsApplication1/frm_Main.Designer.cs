@@ -89,7 +89,7 @@
             this.tctHeThong.Controls.Add(this.tabPage1);
             this.tctHeThong.Controls.Add(this.tabPage2);
             this.tctHeThong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tctHeThong.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tctHeThong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tctHeThong.Location = new System.Drawing.Point(0, 0);
             this.tctHeThong.Name = "tctHeThong";
             this.tctHeThong.SelectedIndex = 0;
@@ -104,10 +104,10 @@
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1317, 103);
+            this.tabPage1.Size = new System.Drawing.Size(1317, 99);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hệ Thống";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -217,10 +217,10 @@
             this.tabPage2.Controls.Add(this.btnSach);
             this.tabPage2.Controls.Add(this.btnTacGia);
             this.tabPage2.Controls.Add(this.btnQLHS);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1317, 103);
+            this.tabPage2.Size = new System.Drawing.Size(1317, 99);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh Mục";
             // 
@@ -563,6 +563,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frm_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang Chủ";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

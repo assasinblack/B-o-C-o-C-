@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\BLL_DangNhap.cs" />
     <Compile Include="Bussiness\BLL_SaoLuuPhucHoi.cs" />
     <Compile Include="Cls_Main.cs" />
     <Compile Include="Cls_DataLayer.cs" />
@@ -77,6 +78,18 @@
     <Compile Include="frm_quanlysach.Designer.cs">
       <DependentUpon>frm_quanlysach.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeThong\frm_KetNoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_KetNoi.Designer.cs">
+      <DependentUpon>frm_KetNoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\frm_saoluuphuchoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +112,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_quanlysach.resx">
       <DependentUpon>frm_quanlysach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_KetNoi.resx">
+      <DependentUpon>frm_KetNoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_saoluuphuchoi.resx">
       <DependentUpon>frm_saoluuphuchoi.cs</DependentUpon>
@@ -179,6 +198,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Save Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Connected-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Rounded Right Filled-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
