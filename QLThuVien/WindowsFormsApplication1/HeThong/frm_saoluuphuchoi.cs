@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.HeThong
         }
         string err = "";
         BLL_SaoLuuPhucHoi bd = new BLL_SaoLuuPhucHoi(Cls_Main.duongdanfileketnoi);
-        string dataname = "";
+        //string dataname = "";
         private void tsbsaoluu_Click(object sender, EventArgs e)
         {
             if (saoluu == true)

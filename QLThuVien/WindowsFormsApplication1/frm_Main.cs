@@ -83,11 +83,7 @@ namespace WindowsFormsApplication1
 
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-
-=======
             MessageBox.Show("Hello");
->>>>>>> origin/master
         }
       
     }
