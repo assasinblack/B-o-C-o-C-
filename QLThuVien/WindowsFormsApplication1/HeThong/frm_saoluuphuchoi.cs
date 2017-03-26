@@ -49,7 +49,8 @@ namespace WindowsFormsApplication1.HeThong
                 }
             }
         }
-
+   
+        string databasename = "";
         private void frm_saoluuphuchoi_Load(object sender, EventArgs e)
         {
             if (saoluu == false)
