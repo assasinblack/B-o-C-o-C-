@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
@@ -82,7 +83,11 @@ namespace WindowsFormsApplication1
 
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
+=======
+            MessageBox.Show("Hello");
+>>>>>>> origin/master
         }
       
     }
