@@ -23,3 +23,16 @@ D:\Đề tài C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Win
 D:\Đề tài C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 D:\Đề tài C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_Main.resources
 D:\Đề tài C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_quanlysach.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_Main.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_capnhat.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_quanlysinhvien.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_quanlytacgia.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_quanlysach.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
