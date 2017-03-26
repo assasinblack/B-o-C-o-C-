@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1.HeThong
                     try
                     {
                         //thực hiện thủ tục sao lưu
-                        databasename
+                        dataname
                         if (bd.PhucHoi(ref err, txtlayfile.Text, databasename))
                         {
                             lblerr.Text = "Đã Phục hồi thành công";
