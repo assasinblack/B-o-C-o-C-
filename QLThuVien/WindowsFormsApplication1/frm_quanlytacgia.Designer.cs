@@ -37,6 +37,8 @@
             this.txtMaTG = new System.Windows.Forms.TextBox();
             this.txtTenTG = new System.Windows.Forms.TextBox();
             this.dgvTacGia = new System.Windows.Forms.DataGridView();
+            this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +54,7 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "QUẢN LÝ TÁC GIẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -67,6 +70,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(772, 142);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnExit
             // 
@@ -135,11 +139,28 @@
             // 
             this.dgvTacGia.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTacGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaTG,
+            this.HoTenTG});
             this.dgvTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTacGia.Location = new System.Drawing.Point(0, 193);
             this.dgvTacGia.Name = "dgvTacGia";
             this.dgvTacGia.Size = new System.Drawing.Size(772, 336);
             this.dgvTacGia.TabIndex = 4;
+            // 
+            // MaTG
+            // 
+            this.MaTG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaTG.DataPropertyName = "MaTG";
+            this.MaTG.HeaderText = "Mã tác giả";
+            this.MaTG.Name = "MaTG";
+            // 
+            // HoTenTG
+            // 
+            this.HoTenTG.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoTenTG.DataPropertyName = "HoTenTG";
+            this.HoTenTG.HeaderText = "Họ tên tác giả";
+            this.HoTenTG.Name = "HoTenTG";
             // 
             // frm_quanlytacgia
             // 
@@ -153,6 +174,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Name = "frm_quanlytacgia";
             this.Text = "Quản Lý Tác Giả";
+            this.Load += new System.EventHandler(this.frm_quanlytacgia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).EndInit();
@@ -171,5 +193,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaTG;
         private System.Windows.Forms.TextBox txtTenTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTenTG;
     }
 }

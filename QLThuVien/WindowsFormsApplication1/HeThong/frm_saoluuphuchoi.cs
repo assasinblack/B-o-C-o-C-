@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.HeThong
         }
         string err = "";
         BLL_SaoLuuPhucHoi bd = new BLL_SaoLuuPhucHoi(Cls_Main.duongdanfileketnoi);
-        //string dataname = "";
+        string databasename = "";
         private void tsbsaoluu_Click(object sender, EventArgs e)
         {
             if (saoluu == true)
@@ -37,6 +37,7 @@ namespace WindowsFormsApplication1.HeThong
                     try
                     {
                         //thực hiện thủ tục sao lưu
+                        databasename = bd.datatbasename;
                         if (bd.SaoLuu(ref err, txtlayfile.Text))
                         {
                             lblerr.Text = "Đã sao lưu thành công";
@@ -127,7 +128,7 @@ namespace WindowsFormsApplication1.HeThong
             }
         }
    
-        string databasename = "";
+       // string databasename = "";
         private void frm_saoluuphuchoi_Load(object sender, EventArgs e)
         {
             if (saoluu == false)
@@ -141,6 +142,11 @@ namespace WindowsFormsApplication1.HeThong
                 lblpanel.Text = "Sao lưu dữ liệu";
                 
             }
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
         }
     }

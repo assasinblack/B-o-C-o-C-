@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.lblerr = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnsaoluu = new System.Windows.Forms.ToolStripButton();
             this.tsbthoat = new System.Windows.Forms.ToolStripButton();
@@ -36,7 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtlayfile = new System.Windows.Forms.TextBox();
             this.btnlayfile = new System.Windows.Forms.Button();
-            this.lblerr = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,11 @@
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // lblerr
+            // 
+            this.lblerr.Name = "lblerr";
+            this.lblerr.Size = new System.Drawing.Size(0, 17);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -61,6 +66,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(580, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnsaoluu
             // 
@@ -122,11 +128,6 @@
             this.btnlayfile.Text = "Browers";
             this.btnlayfile.UseVisualStyleBackColor = true;
             this.btnlayfile.Click += new System.EventHandler(this.btnlayfile_Click);
-            // 
-            // lblerr
-            // 
-            this.lblerr.Name = "lblerr";
-            this.lblerr.Size = new System.Drawing.Size(0, 17);
             // 
             // frm_saoluuphuchoi
             // 

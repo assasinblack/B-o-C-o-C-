@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Bussiness;
+using WindowsFormsApplication1.DTO;
 
 namespace WindowsFormsApplication1
 {
@@ -16,10 +18,36 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        BLL_tacgia bd;
+        DataTable dttacgia;
+        
+        string err = "";
+        private void HienThiTacGia()
+        {
+            dttacgia = new DataTable();
+            dttacgia = bd.GetTacGia(ref err);//lay du lieu tu database len
+            dgvTacGia.DataSource = dttacgia;
 
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_quanlytacgia_Load(object sender, EventArgs e)
+        {
+            bd= new BLL_tacgia(Cls_Main.duongdanfileketnoi);
+            HienThiTacGia();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

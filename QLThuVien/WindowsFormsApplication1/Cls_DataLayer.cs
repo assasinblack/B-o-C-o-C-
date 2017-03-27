@@ -60,6 +60,11 @@ namespace WindowsFormsApplication1
             docchuoiketnoitufile(path);
             cnn = new SqlConnection(connecstring);
         }
+
+        public Cls_DataLayer()
+        {
+            // TODO: Complete member initialization
+        }
         //methed
         private void NoiCacThuocTinhChuoiKetNoi()
         {
