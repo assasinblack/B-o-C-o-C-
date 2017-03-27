@@ -11,5 +11,7 @@ namespace WindowsFormsApplication1
     {
         public static string duongdanfileketnoi = Application.StartupPath + @"\connec.ini";
 
+        public static string maNV;
+        public static string tenNV;
     }
 }

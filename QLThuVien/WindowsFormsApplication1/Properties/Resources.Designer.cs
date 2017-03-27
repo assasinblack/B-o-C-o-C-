@@ -73,6 +73,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Connected_48 {
+            get {
+                object obj = ResourceManager.GetObject("Connected-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Courses_Filled_50 {
             get {
                 object obj = ResourceManager.GetObject("Courses Filled-50", resourceCulture);
@@ -146,6 +156,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Key_Filled_50 {
             get {
                 object obj = ResourceManager.GetObject("Key Filled-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_Rounded_Right_Filled_50 {
+            get {
+                object obj = ResourceManager.GetObject("Login Rounded Right Filled-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
