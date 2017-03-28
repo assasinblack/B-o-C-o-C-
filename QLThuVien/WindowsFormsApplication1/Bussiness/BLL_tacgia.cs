@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Bussiness
        }
        public bool insertNewSanPham(ref string err, DTO.DTO_tacgia _tacgia, double dongia,string MaTG)
        {
-           return data.MyExcuteNonQuery(ref err, "PSP_SanPham_Insert", CommandType.StoredProcedure,
+           return data.MyExcuteNonQuery(ref err, "PSP_TacGia_Insert", CommandType.StoredProcedure,
                  new SqlParameter("@MaTG", _tacgia.MaTG1),
                    new SqlParameter("@DVT", _tacgia.HoTenTG1));
                      
