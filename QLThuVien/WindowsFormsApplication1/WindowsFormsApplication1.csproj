@@ -86,6 +86,12 @@
     <Compile Include="frm_quanlysach.Designer.cs">
       <DependentUpon>frm_quanlysach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frrm_Theloaisach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frrm_Theloaisach.Designer.cs">
+      <DependentUpon>frrm_Theloaisach.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\frm_KetNoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_quanlysach.resx">
       <DependentUpon>frm_quanlysach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frrm_Theloaisach.resx">
+      <DependentUpon>frrm_Theloaisach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_KetNoi.resx">
       <DependentUpon>frm_KetNoi.cs</DependentUpon>
