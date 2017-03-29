@@ -34,20 +34,11 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frm_quanlytacgia_Load(object sender, EventArgs e)
         {
             bd= new BLL_tacgia(Cls_Main.duongdanfileketnoi);
             HienThiTacGia();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
