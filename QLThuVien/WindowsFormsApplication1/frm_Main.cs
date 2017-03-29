@@ -83,9 +83,10 @@ namespace WindowsFormsApplication1
             saoluu.ShowDialog();
         }
 
-        private void btnChoMuon_Click(object sender, EventArgs e)
+        private void btnMuonTraSach_Click(object sender, EventArgs e)
         {
-            
+            Frm_MuonTraSach muontrasach = new Frm_MuonTraSach();
+            muontrasach.ShowDialog();
         }
       
     }

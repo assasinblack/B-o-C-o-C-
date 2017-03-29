@@ -58,3 +58,4 @@ C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplicatio
 C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.HeThong.frm_Login.resources
 C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.HeThong.frm_KetNoi.resources
 C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.HeThong.frm_Login.resources
+C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Frm_MuonTraSach.resources
