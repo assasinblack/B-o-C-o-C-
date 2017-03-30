@@ -31,18 +31,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tctHeThong = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvChoThue = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnMuonTraSach = new System.Windows.Forms.Button();
             this.btnSach = new System.Windows.Forms.Button();
             this.btnTacGia = new System.Windows.Forms.Button();
             this.btnQLHS = new System.Windows.Forms.Button();
+            this.dgvChoThue = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.tctHeThong.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -87,41 +87,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hệ Thống";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.OldLace;
-            this.tabPage2.Controls.Add(this.btnMuonTraSach);
-            this.tabPage2.Controls.Add(this.btnSach);
-            this.tabPage2.Controls.Add(this.btnTacGia);
-            this.tabPage2.Controls.Add(this.btnQLHS);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1317, 99);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Danh Mục";
-            // 
-            // dgvChoThue
-            // 
-            this.dgvChoThue.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvChoThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChoThue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvChoThue.Location = new System.Drawing.Point(0, 131);
-            this.dgvChoThue.Name = "dgvChoThue";
-            this.dgvChoThue.Size = new System.Drawing.Size(1325, 603);
-            this.dgvChoThue.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.ErrorImage = global::WindowsFormsApplication1.Properties.Resources.BG;
-            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.BG;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 131);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1325, 603);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // button5
             // 
@@ -222,6 +187,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.OldLace;
+            this.tabPage2.Controls.Add(this.btnMuonTraSach);
+            this.tabPage2.Controls.Add(this.btnSach);
+            this.tabPage2.Controls.Add(this.btnTacGia);
+            this.tabPage2.Controls.Add(this.btnQLHS);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1317, 99);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Danh Mục";
+            // 
             // btnMuonTraSach
             // 
             this.btnMuonTraSach.BackColor = System.Drawing.Color.OldLace;
@@ -302,6 +281,27 @@
             this.btnQLHS.UseVisualStyleBackColor = false;
             this.btnQLHS.Click += new System.EventHandler(this.btnQLHS_Click);
             // 
+            // dgvChoThue
+            // 
+            this.dgvChoThue.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvChoThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChoThue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvChoThue.Location = new System.Drawing.Point(0, 131);
+            this.dgvChoThue.Name = "dgvChoThue";
+            this.dgvChoThue.Size = new System.Drawing.Size(1325, 603);
+            this.dgvChoThue.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.ErrorImage = global::WindowsFormsApplication1.Properties.Resources.BG;
+            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.BG;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 131);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1325, 603);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,6 +314,7 @@
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang Chủ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_Main_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.tctHeThong.ResumeLayout(false);

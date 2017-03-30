@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bussiness\BLL_DangNhap.cs" />
+    <Compile Include="Bussiness\BLL_HocSinh.cs" />
     <Compile Include="Bussiness\BLL_SaoLuuPhucHoi.cs" />
     <Compile Include="Bussiness\BLL_tacgia.cs" />
     <Compile Include="Cls_Main.cs" />
@@ -68,11 +69,11 @@
     <Compile Include="Frm_MuonTraSach.Designer.cs">
       <DependentUpon>Frm_MuonTraSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_quanlysinhvien.cs">
+    <Compile Include="frm_Quanlyhocsinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_quanlysinhvien.Designer.cs">
-      <DependentUpon>frm_quanlysinhvien.cs</DependentUpon>
+    <Compile Include="frm_Quanlyhocsinh.Designer.cs">
+      <DependentUpon>frm_Quanlyhocsinh.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_quanlytacgia.cs">
       <SubType>Form</SubType>
@@ -122,8 +123,8 @@
     <EmbeddedResource Include="Frm_MuonTraSach.resx">
       <DependentUpon>Frm_MuonTraSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_quanlysinhvien.resx">
-      <DependentUpon>frm_quanlysinhvien.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Quanlyhocsinh.resx">
+      <DependentUpon>frm_Quanlyhocsinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_quanlytacgia.resx">
       <DependentUpon>frm_quanlytacgia.cs</DependentUpon>

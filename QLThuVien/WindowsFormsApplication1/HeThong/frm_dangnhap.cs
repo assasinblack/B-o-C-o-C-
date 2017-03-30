@@ -18,21 +18,32 @@ namespace WindowsFormsApplication1.HeThong
             InitializeComponent();
         }
         KetNoiDT dt = new KetNoiDT();
-        
-        private void button1_Click(object sender, EventArgs e)
+
+        private void bntdangnhap_Click(object sender, EventArgs e)
         {
             SqlParameter para1 = new SqlParameter("@taikhoan", txtuser.Text);
             SqlParameter para2 = new SqlParameter("@matkhau", txtpass.Text);
             DataTable dulieu= dt.sqlLayDuLieu("PSP_NhanVien_test",para1,para2);
             if (dulieu.Rows.Count < 1)
             {
-                MessageBox.Show("sai tai khoan !");
+                MessageBox.Show("Tài khoản không đúng !");
             }
             else
             {
                 frm_Main frm = new frm_Main();
                 frm.ShowDialog();
+                this.Hide();
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frm_dangnhap_Load(object sender, EventArgs e)
+        {
+            txtuser.Focus();
         }
     }
 }

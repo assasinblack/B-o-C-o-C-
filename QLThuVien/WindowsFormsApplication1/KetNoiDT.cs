@@ -14,7 +14,7 @@ namespace TestThuVien.QLThuVienDTO
         {
             if(KetNoiDT.connect ==null)
                 {
-                    KetNoiDT.connect = new SqlConnection("Data Source=KHOA-PC;Initial Catalog=QLThuVien;Integrated Security=SSPI;");
+                    KetNoiDT.connect = new SqlConnection("Data Source=HUYNGUYEN-PC\\HUYNGUYEN;Initial Catalog=QLThuVien;Integrated Security=SSPI;");
                 }
             if (KetNoiDT.connect.State != ConnectionState.Open)
             {

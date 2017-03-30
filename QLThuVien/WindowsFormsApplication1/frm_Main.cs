@@ -31,7 +31,8 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            frm_dangnhap _login = new frm_dangnhap();
+            _login.Close();
         }
 
         private void btnSach_Click(object sender, EventArgs e)
@@ -48,13 +49,12 @@ namespace WindowsFormsApplication1
 
         private void btnQLHS_Click(object sender, EventArgs e)
         {
-            frm_quanlysinhvien _hocsinh = new frm_quanlysinhvien();
+            frm_Quanlyhocsinh _hocsinh = new frm_Quanlyhocsinh();
             _hocsinh.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            
             this.Close();
         }
 
@@ -86,6 +86,11 @@ namespace WindowsFormsApplication1
         {
             Frm_MuonTraSach muontrasach = new Frm_MuonTraSach();
             muontrasach.ShowDialog();
+        }
+
+        private void frm_Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
       
     }
