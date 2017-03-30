@@ -62,6 +62,12 @@
     <Compile Include="frm_capnhat.Designer.cs">
       <DependentUpon>frm_capnhat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_MuonTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MuonTraSach.Designer.cs">
+      <DependentUpon>Frm_MuonTraSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_quanlysinhvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_capnhat.resx">
       <DependentUpon>frm_capnhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MuonTraSach.resx">
+      <DependentUpon>Frm_MuonTraSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_quanlysinhvien.resx">
       <DependentUpon>frm_quanlysinhvien.cs</DependentUpon>
@@ -216,6 +225,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Login Rounded Right Filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Borrow Book Filled-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

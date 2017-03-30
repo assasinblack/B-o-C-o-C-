@@ -73,6 +73,26 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BG {
+            get {
+                object obj = ResourceManager.GetObject("BG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Borrow_Book_Filled_50 {
+            get {
+                object obj = ResourceManager.GetObject("Borrow Book Filled-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Connected_48 {
             get {
                 object obj = ResourceManager.GetObject("Connected-48", resourceCulture);
@@ -196,6 +216,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Receive_Cash_Filled_50 {
             get {
                 object obj = ResourceManager.GetObject("Receive Cash Filled-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh_26 {
+            get {
+                object obj = ResourceManager.GetObject("Refresh-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
