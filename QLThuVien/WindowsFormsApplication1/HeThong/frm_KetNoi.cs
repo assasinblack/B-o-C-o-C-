@@ -85,7 +85,8 @@ namespace WindowsFormsApplication1.HeThong
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Cls_DataLayer data = new Cls_DataLayer(Cls_Main.duongdanfileketnoi);
+            string cs = @"servername=" + txtServer.Text +";database=" + txtDatabase.Text +";userid=" + txtID.Text + ";password=" + txtPass.Text;
+            Cls_DataLayer data = new Cls_DataLayer(cs);
             if(data.kiemtraketnoi(ref err)==true)
                 MessageBox.Show("Thành Công.");
             else

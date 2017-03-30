@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TestThuVien.QLThuVienDTO;
 
 namespace WindowsFormsApplication1
 {
@@ -33,6 +34,12 @@ namespace WindowsFormsApplication1
             frm_capnhat _them = new frm_capnhat();
             _them.them = false;
             _them.ShowDialog();
+        }
+        KetNoiDT dt = new KetNoiDT();
+        private void frm_quanlysach_Load(object sender, EventArgs e)
+        {
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_QuanLySach_Select");
+            dgvSach.DataSource = dulieu;
         }
     }
 }

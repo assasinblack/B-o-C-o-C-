@@ -214,6 +214,7 @@
             this.Name = "frm_quanlysach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sách";
+            this.Load += new System.EventHandler(this.frm_quanlysach_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

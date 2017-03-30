@@ -31,8 +31,7 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            frm_Login _ketnoi = new frm_Login();
-            _ketnoi.ShowDialog();
+           
         }
 
         private void btnSach_Click(object sender, EventArgs e)

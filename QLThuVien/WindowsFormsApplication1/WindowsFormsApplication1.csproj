@@ -86,17 +86,17 @@
     <Compile Include="frrm_Theloaisach.Designer.cs">
       <DependentUpon>frrm_Theloaisach.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeThong\frm_dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_dangnhap.Designer.cs">
+      <DependentUpon>frm_dangnhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\frm_KetNoi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HeThong\frm_KetNoi.Designer.cs">
       <DependentUpon>frm_KetNoi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="HeThong\frm_Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HeThong\frm_Login.Designer.cs">
-      <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThong\frm_saoluuphuchoi.cs">
       <SubType>Form</SubType>
@@ -104,6 +104,7 @@
     <Compile Include="HeThong\frm_saoluuphuchoi.Designer.cs">
       <DependentUpon>frm_saoluuphuchoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="KetNoiDT.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_Main.resx">
@@ -124,11 +125,11 @@
     <EmbeddedResource Include="frrm_Theloaisach.resx">
       <DependentUpon>frrm_Theloaisach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_dangnhap.resx">
+      <DependentUpon>frm_dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_KetNoi.resx">
       <DependentUpon>frm_KetNoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_Login.resx">
-      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_saoluuphuchoi.resx">
       <DependentUpon>frm_saoluuphuchoi.cs</DependentUpon>
