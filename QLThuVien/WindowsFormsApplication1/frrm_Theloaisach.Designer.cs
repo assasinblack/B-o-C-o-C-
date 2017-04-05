@@ -35,12 +35,13 @@
             this.btnxoa = new System.Windows.Forms.ToolStripButton();
             this.btnthoat = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtmatl = new System.Windows.Forms.TextBox();
             this.txttentl = new System.Windows.Forms.TextBox();
-            this.bntluu = new System.Windows.Forms.Button();
+            this.txtmatl = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtgvtheloaisach = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvtheloaisach)).BeginInit();
@@ -59,6 +60,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(477, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // btnthem
             // 
@@ -67,6 +69,7 @@
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(62, 22);
             this.btnthem.Text = "Thêm";
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // btnsua
             // 
@@ -83,6 +86,7 @@
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(52, 22);
             this.btnxoa.Text = "Xóa";
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnthoat
             // 
@@ -94,7 +98,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bntluu);
             this.panel1.Controls.Add(this.txttentl);
             this.panel1.Controls.Add(this.txtmatl);
             this.panel1.Controls.Add(this.label2);
@@ -105,15 +108,21 @@
             this.panel1.Size = new System.Drawing.Size(477, 65);
             this.panel1.TabIndex = 1;
             // 
-            // label1
+            // txttentl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã thể loại:";
+            this.txttentl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttentl.Location = new System.Drawing.Point(278, 19);
+            this.txttentl.Name = "txttentl";
+            this.txttentl.Size = new System.Drawing.Size(100, 26);
+            this.txttentl.TabIndex = 3;
+            // 
+            // txtmatl
+            // 
+            this.txtmatl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmatl.Location = new System.Drawing.Point(90, 19);
+            this.txtmatl.Name = "txtmatl";
+            this.txtmatl.Size = new System.Drawing.Size(100, 26);
+            this.txtmatl.TabIndex = 2;
             // 
             // label2
             // 
@@ -125,40 +134,44 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Tên thể loại:";
             // 
-            // txtmatl
+            // label1
             // 
-            this.txtmatl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmatl.Location = new System.Drawing.Point(90, 19);
-            this.txtmatl.Name = "txtmatl";
-            this.txtmatl.Size = new System.Drawing.Size(100, 26);
-            this.txtmatl.TabIndex = 2;
-            // 
-            // txttentl
-            // 
-            this.txttentl.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttentl.Location = new System.Drawing.Point(278, 19);
-            this.txttentl.Name = "txttentl";
-            this.txttentl.Size = new System.Drawing.Size(100, 26);
-            this.txttentl.TabIndex = 3;
-            // 
-            // bntluu
-            // 
-            this.bntluu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntluu.Location = new System.Drawing.Point(393, 19);
-            this.bntluu.Name = "bntluu";
-            this.bntluu.Size = new System.Drawing.Size(75, 26);
-            this.bntluu.TabIndex = 4;
-            this.bntluu.Text = "Lưu";
-            this.bntluu.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã thể loại:";
             // 
             // dtgvtheloaisach
             // 
+            this.dtgvtheloaisach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvtheloaisach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvtheloaisach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             this.dtgvtheloaisach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvtheloaisach.Location = new System.Drawing.Point(0, 90);
             this.dtgvtheloaisach.Name = "dtgvtheloaisach";
+            this.dtgvtheloaisach.RowHeadersVisible = false;
             this.dtgvtheloaisach.Size = new System.Drawing.Size(477, 204);
             this.dtgvtheloaisach.TabIndex = 2;
+            this.dtgvtheloaisach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvtheloaisach_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "MaTL";
+            this.Column1.HeaderText = "Mã Thể Loại";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "TenTL";
+            this.Column2.HeaderText = "Tên Thể Loại";
+            this.Column2.Name = "Column2";
             // 
             // frrm_Theloaisach
             // 
@@ -173,6 +186,7 @@
             this.MinimizeBox = false;
             this.Name = "frrm_Theloaisach";
             this.Text = "frrm_Theloaisach";
+            this.Load += new System.EventHandler(this.frrm_Theloaisach_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -191,12 +205,13 @@
         private System.Windows.Forms.ToolStripButton btnxoa;
         private System.Windows.Forms.ToolStripButton btnthoat;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button bntluu;
         private System.Windows.Forms.TextBox txttentl;
         private System.Windows.Forms.TextBox txtmatl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgvtheloaisach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
 
     }
 }
