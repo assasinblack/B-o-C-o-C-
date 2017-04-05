@@ -31,17 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtDienThoai = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtMaHS = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,6 +55,9 @@
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.rdbNam = new System.Windows.Forms.RadioButton();
+            this.rdbNu = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLHS)).BeginInit();
@@ -82,7 +83,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 65);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1339, 338);
             this.panel1.TabIndex = 3;
@@ -90,17 +91,18 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Aquamarine;
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.rdbNu);
+            this.groupBox1.Controls.Add(this.rdbNam);
+            this.groupBox1.Controls.Add(this.dtpNgaySinh);
+            this.groupBox1.Controls.Add(this.btnThoat);
+            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Controls.Add(this.btnSua);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.txtGhiChu);
+            this.groupBox1.Controls.Add(this.txtDienThoai);
+            this.groupBox1.Controls.Add(this.txtDiaChi);
+            this.groupBox1.Controls.Add(this.txtHoTen);
+            this.groupBox1.Controls.Add(this.txtMaHS);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -111,145 +113,128 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1339, 338);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học sinh";
             // 
-            // button4
+            // btnThoat
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::WindowsFormsApplication1.Properties.Resources.Exit_Filled_50;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(1186, 147);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(143, 81);
-            this.button4.TabIndex = 49;
-            this.button4.Text = "Thoát";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
+            this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Image = global::WindowsFormsApplication1.Properties.Resources.Exit_Filled_50;
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThoat.Location = new System.Drawing.Point(1186, 147);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(143, 81);
+            this.btnThoat.TabIndex = 49;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // button3
+            // btnXoa
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::WindowsFormsApplication1.Properties.Resources.Delete_Filled_50;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(1186, 44);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 82);
-            this.button3.TabIndex = 48;
-            this.button3.Text = "Xóa";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnXoa.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Image = global::WindowsFormsApplication1.Properties.Resources.Delete_Filled_50;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnXoa.Location = new System.Drawing.Point(1186, 44);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(143, 82);
+            this.btnXoa.TabIndex = 48;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSua
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::WindowsFormsApplication1.Properties.Resources.Edit_Property_Filled_50;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(1019, 147);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 81);
-            this.button2.TabIndex = 47;
-            this.button2.Text = "Sửa";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Image = global::WindowsFormsApplication1.Properties.Resources.Edit_Property_Filled_50;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSua.Location = new System.Drawing.Point(1019, 147);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(146, 81);
+            this.btnSua.TabIndex = 47;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnThem
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.Add_Filled_50;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(1019, 44);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 82);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Thêm";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Image = global::WindowsFormsApplication1.Properties.Resources.Add_Filled_50;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThem.Location = new System.Drawing.Point(1019, 44);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(146, 82);
+            this.btnThem.TabIndex = 46;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // textBox7
+            // txtGhiChu
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox7.Location = new System.Drawing.Point(141, 232);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(750, 29);
-            this.textBox7.TabIndex = 45;
+            this.txtGhiChu.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGhiChu.Location = new System.Drawing.Point(141, 232);
+            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(750, 29);
+            this.txtGhiChu.TabIndex = 45;
             // 
-            // textBox6
+            // txtDienThoai
             // 
-            this.textBox6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox6.Location = new System.Drawing.Point(628, 172);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(368, 29);
-            this.textBox6.TabIndex = 44;
+            this.txtDienThoai.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDienThoai.Location = new System.Drawing.Point(628, 172);
+            this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDienThoai.Name = "txtDienThoai";
+            this.txtDienThoai.Size = new System.Drawing.Size(368, 29);
+            this.txtDienThoai.TabIndex = 44;
             // 
-            // textBox5
+            // txtDiaChi
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(628, 108);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(368, 29);
-            this.textBox5.TabIndex = 43;
+            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDiaChi.Location = new System.Drawing.Point(628, 108);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(368, 29);
+            this.txtDiaChi.TabIndex = 43;
             // 
-            // textBox4
+            // txtHoTen
             // 
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(628, 44);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(368, 29);
-            this.textBox4.TabIndex = 42;
+            this.txtHoTen.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtHoTen.Location = new System.Drawing.Point(141, 106);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(356, 29);
+            this.txtHoTen.TabIndex = 40;
             // 
-            // textBox3
+            // txtMaHS
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(141, 169);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(356, 29);
-            this.textBox3.TabIndex = 41;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(141, 106);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(356, 29);
-            this.textBox2.TabIndex = 40;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(141, 44);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(356, 29);
-            this.textBox1.TabIndex = 39;
+            this.txtMaHS.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaHS.Location = new System.Drawing.Point(141, 44);
+            this.txtMaHS.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaHS.Name = "txtMaHS";
+            this.txtMaHS.Size = new System.Drawing.Size(356, 29);
+            this.txtMaHS.TabIndex = 39;
             // 
             // label8
             // 
@@ -343,7 +328,7 @@
             this.colGhiChu});
             this.dgvQLHS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvQLHS.Location = new System.Drawing.Point(0, 403);
-            this.dgvQLHS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvQLHS.Margin = new System.Windows.Forms.Padding(4);
             this.dgvQLHS.Name = "dgvQLHS";
             this.dgvQLHS.RowHeadersVisible = false;
             this.dgvQLHS.Size = new System.Drawing.Size(1339, 438);
@@ -395,6 +380,38 @@
             this.colGhiChu.HeaderText = "Ghi chú";
             this.colGhiChu.Name = "colGhiChu";
             // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(628, 44);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 29);
+            this.dtpNgaySinh.TabIndex = 50;
+            // 
+            // rdbNam
+            // 
+            this.rdbNam.AutoSize = true;
+            this.rdbNam.Checked = true;
+            this.rdbNam.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdbNam.Location = new System.Drawing.Point(141, 174);
+            this.rdbNam.Name = "rdbNam";
+            this.rdbNam.Size = new System.Drawing.Size(67, 26);
+            this.rdbNam.TabIndex = 51;
+            this.rdbNam.Text = "Nam";
+            this.rdbNam.UseVisualStyleBackColor = true;
+            // 
+            // rdbNu
+            // 
+            this.rdbNu.AutoSize = true;
+            this.rdbNu.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdbNu.Location = new System.Drawing.Point(226, 174);
+            this.rdbNu.Name = "rdbNu";
+            this.rdbNu.Size = new System.Drawing.Size(53, 26);
+            this.rdbNu.TabIndex = 51;
+            this.rdbNu.Text = "Nữ";
+            this.rdbNu.UseVisualStyleBackColor = true;
+            // 
             // frm_Quanlyhocsinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -405,7 +422,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Quanlyhocsinh";
             this.Text = "Quản Lý Học Sinh";
             this.Load += new System.EventHandler(this.frm_quanlysinhvien_Load);
@@ -422,17 +439,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtDienThoai;
+        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtMaHS;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -448,5 +463,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGhiChu;
+        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        private System.Windows.Forms.RadioButton rdbNu;
+        private System.Windows.Forms.RadioButton rdbNam;
     }
 }
