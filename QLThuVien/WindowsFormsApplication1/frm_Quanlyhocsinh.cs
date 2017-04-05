@@ -18,6 +18,7 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         //BLL_HocSinh bd;
         //DataTable dtdshosinh;
         //string err = "";
@@ -31,6 +32,8 @@ namespace WindowsFormsApplication1
         {
             //HienThiDS();
 =======
+=======
+>>>>>>> origin/master
         BLL_HocSinh bd;
         DataTable dtdshosinh;
         string err = "";
@@ -43,6 +46,9 @@ namespace WindowsFormsApplication1
         private void frm_quanlysinhvien_Load(object sender, EventArgs e)
         {
             HienThiDS();
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         }
 
