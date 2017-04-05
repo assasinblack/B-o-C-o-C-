@@ -20,9 +20,12 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         KetNoiDT dt = new KetNoiDT();
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/master
 <<<<<<< HEAD
         //BLL_HocSinh bd;
         //DataTable dtdshosinh;

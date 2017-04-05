@@ -33,6 +33,9 @@ namespace WindowsFormsApplication1.Bussiness
 >>>>>>> origin/master
 =======
 >>>>>>> origin/master
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
     }
 }
