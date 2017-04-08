@@ -78,6 +78,7 @@
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(51, 22);
             this.btnsua.Text = "Sửa";
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnxoa
             // 
@@ -95,6 +96,7 @@
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(63, 22);
             this.btnthoat.Text = "Thoát";
+            this.btnthoat.Click += new System.EventHandler(this.btnthoat_Click);
             // 
             // panel1
             // 

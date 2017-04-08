@@ -28,6 +28,11 @@ namespace WindowsFormsApplication1
             {
                 cmbTheLoai.Items.Add(dulieu.Rows[dulieu.Rows.Count - i]["MaTL"].ToString());
             }
+            DataTable dulieu1 = dt.sqlLayDuLieu("PSP_TacGia_Select1");
+            for (int j = 1; j <= dulieu1.Rows.Count; j++)
+            {
+                cmbTacGia.Items.Add(dulieu1.Rows[dulieu1.Rows.Count - j]["MaTG"].ToString());
+            }
         }
         private void frm_capnhat_Load(object sender, EventArgs e)
         {
@@ -76,6 +81,22 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Refresh();
+        }
+
+        private void btnTacGia_Click(object sender, EventArgs e)
+        {
+            frm_quanlytacgia frm = new frm_quanlytacgia();
+            frm.Show();
+        }
+
+        private void cmbTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

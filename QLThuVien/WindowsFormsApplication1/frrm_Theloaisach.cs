@@ -58,5 +58,22 @@ namespace WindowsFormsApplication1
             txtmatl.Text = dtgvtheloaisach.Rows[e.RowIndex].Cells[0].Value.ToString();
             txttentl.Text = dtgvtheloaisach.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
+
+        private void btnthoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnsua_Click(object sender, EventArgs e)
+        {
+            SqlParameter para1 = new SqlParameter("@matl", txtmatl.Text);
+            SqlParameter para2 = new SqlParameter("@tentl", txttentl.Text);
+            dt.sqlThucThi("PSP_TheLoaiSach_Update", para1, para2);
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_TheLoaiSach_Select");
+            dtgvtheloaisach.DataSource = dulieu;
+            txtmatl.Text = "";
+            txttentl.Text = "";
+            
+        }
     }
 }

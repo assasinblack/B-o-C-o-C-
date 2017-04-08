@@ -17,8 +17,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         //BLL_HocSinh bd;
         //DataTable dtdshosinh;
         //string err = "";
@@ -31,9 +30,7 @@ namespace WindowsFormsApplication1
         private void frm_quanlysinhvien_Load(object sender, EventArgs e)
         {
             //HienThiDS();
-=======
-=======
->>>>>>> origin/master
+        }
         BLL_HocSinh bd;
         DataTable dtdshosinh;
         string err = "";
@@ -43,14 +40,11 @@ namespace WindowsFormsApplication1
             dtdshosinh = bd.GetDSHocSinh(ref err);
             dgvQLHS.DataSource = dtdshosinh.DefaultView;
         }
-        private void frm_quanlysinhvien_Load(object sender, EventArgs e)
+        /*private void frm_quanlysinhvien_Load(object sender, EventArgs e)
         {
             HienThiDS();
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-        }
+
+        }*/
 
         private void button4_Click(object sender, EventArgs e)
         {

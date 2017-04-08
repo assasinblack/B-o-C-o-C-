@@ -39,6 +39,8 @@
             this.dgvTacGia = new System.Windows.Forms.DataGridView();
             this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bntsua = new System.Windows.Forms.Button();
+            this.bntxoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +60,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCyan;
+            this.panel1.Controls.Add(this.bntxoa);
+            this.panel1.Controls.Add(this.bntsua);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnCapNhat);
             this.panel1.Controls.Add(this.label3);
@@ -75,7 +79,7 @@
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnExit.Image = global::WindowsFormsApplication1.Properties.Resources.Exit_Filled_50;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(399, 63);
+            this.btnExit.Location = new System.Drawing.Point(563, 63);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(121, 65);
             this.btnExit.TabIndex = 20;
@@ -89,13 +93,14 @@
             this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCapNhat.Image = global::WindowsFormsApplication1.Properties.Resources.Save_Filled_50;
             this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.Location = new System.Drawing.Point(227, 63);
+            this.btnCapNhat.Location = new System.Drawing.Point(41, 63);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(129, 65);
             this.btnCapNhat.TabIndex = 19;
             this.btnCapNhat.Text = "Lưu";
             this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label3
             // 
@@ -135,6 +140,7 @@
             // 
             // dgvTacGia
             // 
+            this.dgvTacGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTacGia.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTacGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -143,8 +149,10 @@
             this.dgvTacGia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTacGia.Location = new System.Drawing.Point(0, 193);
             this.dgvTacGia.Name = "dgvTacGia";
+            this.dgvTacGia.RowHeadersVisible = false;
             this.dgvTacGia.Size = new System.Drawing.Size(772, 336);
             this.dgvTacGia.TabIndex = 4;
+            this.dgvTacGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTacGia_CellClick);
             // 
             // MaTG
             // 
@@ -159,6 +167,34 @@
             this.HoTenTG.DataPropertyName = "HoTenTG";
             this.HoTenTG.HeaderText = "Họ tên tác giả";
             this.HoTenTG.Name = "HoTenTG";
+            // 
+            // bntsua
+            // 
+            this.bntsua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bntsua.Image = global::WindowsFormsApplication1.Properties.Resources.Save_Filled_50;
+            this.bntsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntsua.Location = new System.Drawing.Point(193, 63);
+            this.bntsua.Name = "bntsua";
+            this.bntsua.Size = new System.Drawing.Size(129, 65);
+            this.bntsua.TabIndex = 21;
+            this.bntsua.Text = "Sửa";
+            this.bntsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bntsua.UseVisualStyleBackColor = true;
+            this.bntsua.Click += new System.EventHandler(this.bntsua_Click);
+            // 
+            // bntxoa
+            // 
+            this.bntxoa.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bntxoa.Image = global::WindowsFormsApplication1.Properties.Resources.Save_Filled_50;
+            this.bntxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntxoa.Location = new System.Drawing.Point(374, 63);
+            this.bntxoa.Name = "bntxoa";
+            this.bntxoa.Size = new System.Drawing.Size(129, 65);
+            this.bntxoa.TabIndex = 22;
+            this.bntxoa.Text = "Xóa";
+            this.bntxoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bntxoa.UseVisualStyleBackColor = true;
+            this.bntxoa.Click += new System.EventHandler(this.bntxoa_Click);
             // 
             // frm_quanlytacgia
             // 
@@ -193,5 +229,7 @@
         private System.Windows.Forms.TextBox txtTenTG;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTG;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTenTG;
+        private System.Windows.Forms.Button bntxoa;
+        private System.Windows.Forms.Button bntsua;
     }
 }

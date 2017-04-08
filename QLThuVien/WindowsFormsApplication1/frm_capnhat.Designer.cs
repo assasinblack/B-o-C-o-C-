@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblPanel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bntreset = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.dtpNgayXB = new System.Windows.Forms.DateTimePicker();
@@ -51,7 +52,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bntreset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(536, 50);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblPanel
             // 
@@ -111,6 +112,16 @@
             this.panel2.Size = new System.Drawing.Size(536, 512);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // bntreset
+            // 
+            this.bntreset.Location = new System.Drawing.Point(458, 120);
+            this.bntreset.Name = "bntreset";
+            this.bntreset.Size = new System.Drawing.Size(75, 23);
+            this.bntreset.TabIndex = 9;
+            this.bntreset.Text = "reset";
+            this.bntreset.UseVisualStyleBackColor = true;
+            this.bntreset.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnThoat
             // 
@@ -158,6 +169,7 @@
             this.btnTacGia.TabIndex = 4;
             this.btnTacGia.Text = "+";
             this.btnTacGia.UseVisualStyleBackColor = true;
+            this.btnTacGia.Click += new System.EventHandler(this.btnTacGia_Click);
             // 
             // btnTheLoai
             // 
@@ -187,6 +199,7 @@
             this.cmbTheLoai.Name = "cmbTheLoai";
             this.cmbTheLoai.Size = new System.Drawing.Size(279, 29);
             this.cmbTheLoai.TabIndex = 2;
+            this.cmbTheLoai.SelectedIndexChanged += new System.EventHandler(this.cmbTheLoai_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -309,16 +322,6 @@
             this.label2.Size = new System.Drawing.Size(88, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã Sách:";
-            // 
-            // bntreset
-            // 
-            this.bntreset.Location = new System.Drawing.Point(458, 120);
-            this.bntreset.Name = "bntreset";
-            this.bntreset.Size = new System.Drawing.Size(75, 23);
-            this.bntreset.TabIndex = 9;
-            this.bntreset.Text = "reset";
-            this.bntreset.UseVisualStyleBackColor = true;
-            this.bntreset.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm_capnhat
             // 
