@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1
             SqlParameter para1 = new SqlParameter("@masach", txtMaSach.Text);
             SqlParameter para2 = new SqlParameter("@tensach", txtTenSach.Text);
             SqlParameter para3 = new SqlParameter("@matl", cmbTheLoai.Text);
-            SqlParameter para4 = new SqlParameter("@tacgia", cmbTacGia.Text);
+            SqlParameter para4 = new SqlParameter("@matg", cmbTacGia.Text);
             SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
             SqlParameter para6 = new SqlParameter("@ngayxuatban", dtpNgayXB.Text);
             SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);

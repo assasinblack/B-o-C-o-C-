@@ -19,18 +19,9 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
         KetNoiDT dt = new KetNoiDT();
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
-<<<<<<< HEAD
->>>>>>> origin/master
+
         //BLL_HocSinh bd;
         //DataTable dtdshosinh;
         //string err = "";
@@ -47,7 +38,7 @@ namespace WindowsFormsApplication1
         BLL_HocSinh bd;
         DataTable dtdshosinh;
         string err = "";
->>>>>>> origin/master
+
         public void HienThiDS()
         {
             DataTable hs = dt.sqlLayDuLieu("PSP_HocSinh_Select");
@@ -72,7 +63,7 @@ namespace WindowsFormsApplication1
             SqlParameter pa4 = new SqlParameter("@NgaySinh", txtMaHS.Text);
             SqlParameter pa5 = new SqlParameter("@DiaChi", txtMaHS.Text);
             SqlParameter pa6 = new SqlParameter("@DienThoai", txtMaHS.Text);
-            SqlParameter pa7=new SqlParameter("@GhiChu")
+            SqlParameter pa7 = new SqlParameter("@GhiChu", txtGhiChu.Text);
             dt.sqlThucThi("sqlThucThi");
         }
     }
