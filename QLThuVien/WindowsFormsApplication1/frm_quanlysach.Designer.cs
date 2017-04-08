@@ -78,6 +78,7 @@
             this.btnSeach.Text = "Lọc     ";
             this.btnSeach.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSeach.UseVisualStyleBackColor = true;
+            this.btnSeach.Click += new System.EventHandler(this.btnSeach_Click);
             // 
             // txtSeach
             // 

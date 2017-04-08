@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
@@ -40,6 +42,15 @@ namespace WindowsFormsApplication1
         {
             DataTable dulieu = dt.sqlLayDuLieu("PSP_QuanLySach_Select");
             dgvSach.DataSource = dulieu;
+        }
+
+        private void btnSeach_Click(object sender, EventArgs e)
+        {
+            SqlParameter pa1=new SqlParameter("@seach",cmbLoaiSach.Text);
+            SqlParameter pa2=new SqlParameter("@seach",cmbTacGia.Text);
+            SqlParameter pa3=new SqlParameter("@seach",txtSeach.Text);
+
+            dt.sqlThucThi("PSP_QuanLySach_Select",pa3);
         }
     }
 }
