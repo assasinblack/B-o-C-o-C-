@@ -36,7 +36,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnLoad1 = new System.Windows.Forms.Button();
             this.btnThoat1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnChoMuon = new System.Windows.Forms.Button();
             this.btnMoi = new System.Windows.Forms.Button();
             this.txtSoLuongMuon = new System.Windows.Forms.TextBox();
             this.dtpTra = new System.Windows.Forms.DateTimePicker();
@@ -62,6 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvChitietMuon1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnThoat2 = new System.Windows.Forms.Button();
@@ -79,7 +80,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.dgvChitietMuon1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -89,9 +89,9 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChitietMuon1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChitietMuon1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -131,11 +131,14 @@
             // 
             // dgvChiTietMuon
             // 
+            this.dgvChiTietMuon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChiTietMuon.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvChiTietMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChiTietMuon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChiTietMuon.Location = new System.Drawing.Point(0, 0);
             this.dgvChiTietMuon.Name = "dgvChiTietMuon";
+            this.dgvChiTietMuon.RowHeadersVisible = false;
+            this.dgvChiTietMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChiTietMuon.Size = new System.Drawing.Size(968, 346);
             this.dgvChiTietMuon.TabIndex = 2;
             // 
@@ -154,7 +157,7 @@
             this.groupBox2.BackColor = System.Drawing.Color.LightBlue;
             this.groupBox2.Controls.Add(this.btnLoad1);
             this.groupBox2.Controls.Add(this.btnThoat1);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnChoMuon);
             this.groupBox2.Controls.Add(this.btnMoi);
             this.groupBox2.Controls.Add(this.txtSoLuongMuon);
             this.groupBox2.Controls.Add(this.dtpTra);
@@ -183,6 +186,7 @@
             this.btnLoad1.Size = new System.Drawing.Size(48, 44);
             this.btnLoad1.TabIndex = 4;
             this.btnLoad1.UseVisualStyleBackColor = true;
+            this.btnLoad1.Click += new System.EventHandler(this.btnLoad1_Click);
             // 
             // btnThoat1
             // 
@@ -197,15 +201,16 @@
             this.btnThoat1.UseVisualStyleBackColor = true;
             this.btnThoat1.Click += new System.EventHandler(this.btnThoat1_Click);
             // 
-            // button1
+            // btnChoMuon
             // 
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(379, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Cho mượn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnChoMuon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnChoMuon.Location = new System.Drawing.Point(379, 75);
+            this.btnChoMuon.Name = "btnChoMuon";
+            this.btnChoMuon.Size = new System.Drawing.Size(96, 35);
+            this.btnChoMuon.TabIndex = 4;
+            this.btnChoMuon.Text = "Cho mượn";
+            this.btnChoMuon.UseVisualStyleBackColor = true;
+            this.btnChoMuon.Click += new System.EventHandler(this.btnChoMuon_Click);
             // 
             // btnMoi
             // 
@@ -216,6 +221,7 @@
             this.btnMoi.TabIndex = 4;
             this.btnMoi.Text = "Mượn mới";
             this.btnMoi.UseVisualStyleBackColor = true;
+            this.btnMoi.Click += new System.EventHandler(this.btnMoi_Click);
             // 
             // txtSoLuongMuon
             // 
@@ -369,6 +375,7 @@
             this.btnXemSach.TabIndex = 2;
             this.btnXemSach.Text = "Xem";
             this.btnXemSach.UseVisualStyleBackColor = true;
+            this.btnXemSach.Click += new System.EventHandler(this.btnXemSach_Click);
             // 
             // cmbTenSach
             // 
@@ -465,6 +472,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(968, 400);
             this.panel2.TabIndex = 1;
+            // 
+            // dgvChitietMuon1
+            // 
+            this.dgvChitietMuon1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChitietMuon1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvChitietMuon1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChitietMuon1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvChitietMuon1.Location = new System.Drawing.Point(0, 0);
+            this.dgvChitietMuon1.Name = "dgvChitietMuon1";
+            this.dgvChitietMuon1.RowHeadersVisible = false;
+            this.dgvChitietMuon1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvChitietMuon1.Size = new System.Drawing.Size(968, 400);
+            this.dgvChitietMuon1.TabIndex = 3;
             // 
             // panel1
             // 
@@ -648,16 +668,6 @@
             this.label11.TabIndex = 1;
             this.label11.Text = "Mã học sinh:";
             // 
-            // dgvChitietMuon1
-            // 
-            this.dgvChitietMuon1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvChitietMuon1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChitietMuon1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvChitietMuon1.Location = new System.Drawing.Point(0, 0);
-            this.dgvChitietMuon1.Name = "dgvChitietMuon1";
-            this.dgvChitietMuon1.Size = new System.Drawing.Size(968, 400);
-            this.dgvChitietMuon1.TabIndex = 3;
-            // 
             // Frm_MuonTraSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -668,6 +678,7 @@
             this.Name = "Frm_MuonTraSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mượn Trả Sách";
+            this.Load += new System.EventHandler(this.Frm_MuonTraSach_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -679,10 +690,10 @@
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChitietMuon1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvChitietMuon1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -700,7 +711,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnLoad1;
         private System.Windows.Forms.Button btnThoat1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChoMuon;
         private System.Windows.Forms.Button btnMoi;
         private System.Windows.Forms.TextBox txtSoLuongMuon;
         private System.Windows.Forms.DateTimePicker dtpTra;
