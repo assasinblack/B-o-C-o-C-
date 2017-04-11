@@ -50,16 +50,34 @@ namespace WindowsFormsApplication1
             {
                 cmbTenSach.Items.Add(sach.Rows[sach.Rows.Count - i]["TenSach"].ToString());
             }
-
+            txtMaHS.Enabled = txtMaSach.Enabled = dtpNgayMuon.Enabled = dtpNgayHenTra.Enabled = false;
         }
 
         private void btnMoi_Click(object sender, EventArgs e)
         {
             enable(true);
+            DataTable hs = dt.sqlLayDuLieu("PSP_HocSinh_Show");
+            for(int i=1;i<=hs.Rows.Count;i++)
+            {
+                cmbHoTenHS.Items.Add(hs.Rows[hs.Rows.Count - i]["HoTenHS"].ToString());
+            }
+            DataTable id = dt.sqlLayDuLieu("SP_IDCTMuon_Max");
+            lblMaMuon.Text = id.Rows[0]["MaMuonSach"].ToString();
         }
 
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
+            SqlParameter HoTen = new SqlParameter("@HoTenHS", cmbHoTenHS.Text);
+            DataTable mshs=dt.sqlLayDuLieu("PsP_MaHS_Select",HoTen);
+            lblMaHS.Text = mshs.Rows[0]["MaHS"].ToString();
+            SqlParameter MaMuonSach = new SqlParameter("@MaMuonSach", lblMaMuon.Text);
+            SqlParameter MaSach = new SqlParameter("@MaSach", lblMaSach.Text);
+            SqlParameter MaHS = new SqlParameter("@MaHS", lblMaHS.Text);
+            SqlParameter Muon = new SqlParameter("@NgayMuon", dtpMuon.Text);
+            SqlParameter HenTra = new SqlParameter("@NgayHenTra", dtpTra.Text);
+            SqlParameter Tra = new SqlParameter("@NgayTra","");
+            dt.sqlThucThi("PSP_ChiTietMuon_Insert", MaMuonSach, MaSach, MaHS, Muon, HenTra, Tra);
+
             enable(false);
             cmbTenSach.Text = "";
             lblMaSach.Text = "";
@@ -67,6 +85,7 @@ namespace WindowsFormsApplication1
             lblSLuong.Text = "";
             lblNgayXB.Text = "";
             lblTacGia.Text = "";
+            cmbHoTenHS.Text = "";
         }
 
         private void btnXemSach_Click(object sender, EventArgs e)
@@ -82,7 +101,14 @@ namespace WindowsFormsApplication1
 
         private void btnLoad1_Click(object sender, EventArgs e)
         {
+            DataTable chitiet = dt.sqlLayDuLieu("PSP_CTMuonSach_Select");
+            dgvChiTietMuon.DataSource = chitiet;
+        }
 
+        private void btnLoad2_Click(object sender, EventArgs e)
+        {
+            DataTable chitiet = dt.sqlLayDuLieu("PSP_CTMuonSach_Select");
+            dgvChitietMuon1.DataSource = chitiet;
         }
     }
 }
