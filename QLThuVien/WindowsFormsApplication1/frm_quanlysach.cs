@@ -40,8 +40,9 @@ namespace WindowsFormsApplication1
         KetNoiDT dt = new KetNoiDT();
         private void frm_quanlysach_Load(object sender, EventArgs e)
         {
-            DataTable dulieu = dt.sqlLayDuLieu("PSP_QuanLySach_Select");
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_Sach_Select");
             dgvSach.DataSource = dulieu;
+                
         }
 
         private void btnSeach_Click(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace WindowsFormsApplication1
             SqlParameter pa2=new SqlParameter("@seach",cmbTacGia.Text);
             SqlParameter pa3=new SqlParameter("@seach",txtSeach.Text);
 
-            dt.sqlThucThi("PSP_QuanLySach_Select",pa3);
+            dt.sqlThucThi("PSP_Sach_Select", pa3);
         }
     }
 }

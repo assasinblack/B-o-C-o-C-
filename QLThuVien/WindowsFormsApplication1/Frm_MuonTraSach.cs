@@ -73,8 +73,8 @@ namespace WindowsFormsApplication1
             SqlParameter MaMuonSach = new SqlParameter("@MaMuonSach", lblMaMuon.Text);
             SqlParameter MaSach = new SqlParameter("@MaSach", lblMaSach.Text);
             SqlParameter MaHS = new SqlParameter("@MaHS", lblMaHS.Text);
-            SqlParameter Muon = new SqlParameter("@NgayMuon", dtpMuon.Text);
-            SqlParameter HenTra = new SqlParameter("@NgayHenTra", dtpTra.Text);
+            SqlParameter Muon = new SqlParameter("@NgayMuon", Convert.ToDateTime(dtpMuon.Text));
+            SqlParameter HenTra = new SqlParameter("@NgayHenTra", Convert.ToDateTime(dtpTra.Text));
             SqlParameter Tra = new SqlParameter("@NgayTra","");
             dt.sqlThucThi("PSP_ChiTietMuon_Insert", MaMuonSach, MaSach, MaHS, Muon, HenTra, Tra);
 

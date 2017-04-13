@@ -34,6 +34,8 @@
             this.dgvChiTietMuon = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblMaHS = new System.Windows.Forms.Label();
+            this.lblMaMuon = new System.Windows.Forms.Label();
             this.btnLoad1 = new System.Windows.Forms.Button();
             this.btnThoat1 = new System.Windows.Forms.Button();
             this.btnChoMuon = new System.Windows.Forms.Button();
@@ -80,8 +82,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.lblMaMuon = new System.Windows.Forms.Label();
-            this.lblMaHS = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -179,6 +179,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin mượn";
             // 
+            // lblMaHS
+            // 
+            this.lblMaHS.AutoSize = true;
+            this.lblMaHS.Location = new System.Drawing.Point(458, 209);
+            this.lblMaHS.Name = "lblMaHS";
+            this.lblMaHS.Size = new System.Drawing.Size(0, 19);
+            this.lblMaHS.TabIndex = 5;
+            this.lblMaHS.Visible = false;
+            // 
+            // lblMaMuon
+            // 
+            this.lblMaMuon.AutoSize = true;
+            this.lblMaMuon.Location = new System.Drawing.Point(394, 197);
+            this.lblMaMuon.Name = "lblMaMuon";
+            this.lblMaMuon.Size = new System.Drawing.Size(0, 19);
+            this.lblMaMuon.TabIndex = 5;
+            this.lblMaMuon.Visible = false;
+            // 
             // btnLoad1
             // 
             this.btnLoad1.FlatAppearance.BorderSize = 0;
@@ -236,8 +254,8 @@
             // 
             // dtpTra
             // 
-            this.dtpTra.CustomFormat = "dd/mm/yyyy";
-            this.dtpTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTra.CustomFormat = "";
+            this.dtpTra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTra.Location = new System.Drawing.Point(137, 126);
             this.dtpTra.Name = "dtpTra";
             this.dtpTra.Size = new System.Drawing.Size(220, 26);
@@ -245,8 +263,8 @@
             // 
             // dtpMuon
             // 
-            this.dtpMuon.CustomFormat = "dd/mm/yyy";
-            this.dtpMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpMuon.CustomFormat = "";
+            this.dtpMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpMuon.Location = new System.Drawing.Point(137, 77);
             this.dtpMuon.Name = "dtpMuon";
             this.dtpMuon.Size = new System.Drawing.Size(220, 26);
@@ -674,24 +692,6 @@
             this.label11.Size = new System.Drawing.Size(110, 20);
             this.label11.TabIndex = 1;
             this.label11.Text = "Mã học sinh:";
-            // 
-            // lblMaMuon
-            // 
-            this.lblMaMuon.AutoSize = true;
-            this.lblMaMuon.Location = new System.Drawing.Point(394, 197);
-            this.lblMaMuon.Name = "lblMaMuon";
-            this.lblMaMuon.Size = new System.Drawing.Size(0, 19);
-            this.lblMaMuon.TabIndex = 5;
-            this.lblMaMuon.Visible = false;
-            // 
-            // lblMaHS
-            // 
-            this.lblMaHS.AutoSize = true;
-            this.lblMaHS.Location = new System.Drawing.Point(458, 209);
-            this.lblMaHS.Name = "lblMaHS";
-            this.lblMaHS.Size = new System.Drawing.Size(0, 19);
-            this.lblMaHS.TabIndex = 5;
-            this.lblMaHS.Visible = false;
             // 
             // Frm_MuonTraSach
             // 
