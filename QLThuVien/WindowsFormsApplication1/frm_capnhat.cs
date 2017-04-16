@@ -62,8 +62,9 @@ namespace WindowsFormsApplication1
             SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
             SqlParameter para6 = new SqlParameter("@ngayxuatban", dtpNgayXB.Text);
             SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);
-            dt.sqlThucThi("PSP_QuanLySach_Insert", para1, para2, para3, para5, para6, para7);
-            dt.sqlThucThi("PSP_SachTacGia_Insert", para1, para4);
+            dt.sqlThucThi("PSP_QuanLySach_Insert", para1, para3, para2, para7, para5, para6);
+            SqlParameter para8 = new SqlParameter("@masach", txtMaSach.Text);
+            dt.sqlThucThi("PSP_SachTacGia_Insert", para4, para8);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
