@@ -157,6 +157,7 @@
             this.dtgvtheloaisach.Location = new System.Drawing.Point(0, 90);
             this.dtgvtheloaisach.Name = "dtgvtheloaisach";
             this.dtgvtheloaisach.RowHeadersVisible = false;
+            this.dtgvtheloaisach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvtheloaisach.Size = new System.Drawing.Size(477, 204);
             this.dtgvtheloaisach.TabIndex = 2;
             this.dtgvtheloaisach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvtheloaisach_CellClick);

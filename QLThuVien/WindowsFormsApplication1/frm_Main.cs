@@ -75,12 +75,7 @@ namespace WindowsFormsApplication1
             
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            frm_saoluuphuchoi saoluu = new frm_saoluuphuchoi();
-            saoluu.saoluu = false;
-            saoluu.ShowDialog();
-        }
+      
 
         private void btnMuonTraSach_Click(object sender, EventArgs e)
         {

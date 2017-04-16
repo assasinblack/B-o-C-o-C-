@@ -178,6 +178,7 @@
             this.dgvTacGia.Location = new System.Drawing.Point(0, 193);
             this.dgvTacGia.Name = "dgvTacGia";
             this.dgvTacGia.RowHeadersVisible = false;
+            this.dgvTacGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTacGia.Size = new System.Drawing.Size(772, 336);
             this.dgvTacGia.TabIndex = 4;
             this.dgvTacGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTacGia_CellClick);

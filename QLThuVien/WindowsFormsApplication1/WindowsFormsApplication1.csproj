@@ -44,13 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bussiness\BLL_DangNhap.cs" />
-    <Compile Include="Bussiness\BLL_HocSinh.cs" />
-    <Compile Include="Bussiness\BLL_SaoLuuPhucHoi.cs" />
-    <Compile Include="Bussiness\BLL_tacgia.cs" />
     <Compile Include="Cls_Main.cs" />
     <Compile Include="Cls_DataLayer.cs" />
-    <Compile Include="DTO\DTO_tacgia.cs" />
     <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,12 +94,6 @@
     <Compile Include="HeThong\frm_dangnhap.Designer.cs">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeThong\frm_KetNoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HeThong\frm_KetNoi.Designer.cs">
-      <DependentUpon>frm_KetNoi.cs</DependentUpon>
-    </Compile>
     <Compile Include="HeThong\frm_saoluuphuchoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_dangnhap.resx">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HeThong\frm_KetNoi.resx">
-      <DependentUpon>frm_KetNoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_saoluuphuchoi.resx">
       <DependentUpon>frm_saoluuphuchoi.cs</DependentUpon>

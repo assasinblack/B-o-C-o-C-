@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbNu = new System.Windows.Forms.RadioButton();
+            this.rdbNam = new System.Windows.Forms.RadioButton();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -55,9 +58,6 @@
             this.colDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.rdbNam = new System.Windows.Forms.RadioButton();
-            this.rdbNu = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLHS)).BeginInit();
@@ -121,6 +121,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học sinh";
             // 
+            // rdbNu
+            // 
+            this.rdbNu.AutoSize = true;
+            this.rdbNu.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdbNu.Location = new System.Drawing.Point(226, 174);
+            this.rdbNu.Name = "rdbNu";
+            this.rdbNu.Size = new System.Drawing.Size(53, 26);
+            this.rdbNu.TabIndex = 51;
+            this.rdbNu.Text = "Nữ";
+            this.rdbNu.UseVisualStyleBackColor = true;
+            // 
+            // rdbNam
+            // 
+            this.rdbNam.AutoSize = true;
+            this.rdbNam.Checked = true;
+            this.rdbNam.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rdbNam.Location = new System.Drawing.Point(141, 174);
+            this.rdbNam.Name = "rdbNam";
+            this.rdbNam.Size = new System.Drawing.Size(67, 26);
+            this.rdbNam.TabIndex = 51;
+            this.rdbNam.TabStop = true;
+            this.rdbNam.Text = "Nam";
+            this.rdbNam.UseVisualStyleBackColor = true;
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.Location = new System.Drawing.Point(628, 44);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 29);
+            this.dtpNgaySinh.TabIndex = 50;
+            // 
             // btnThoat
             // 
             this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
@@ -155,6 +188,7 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -172,6 +206,7 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -217,6 +252,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(368, 29);
             this.txtDiaChi.TabIndex = 43;
+            this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
             // 
             // txtHoTen
             // 
@@ -331,8 +367,9 @@
             this.dgvQLHS.Margin = new System.Windows.Forms.Padding(4);
             this.dgvQLHS.Name = "dgvQLHS";
             this.dgvQLHS.RowHeadersVisible = false;
-            this.dgvQLHS.Size = new System.Drawing.Size(1339, 438);
+            this.dgvQLHS.Size = new System.Drawing.Size(1339, 347);
             this.dgvQLHS.TabIndex = 4;
+            this.dgvQLHS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLHS_CellClick);
             // 
             // colMaHS
             // 
@@ -380,44 +417,12 @@
             this.colGhiChu.HeaderText = "Ghi chú";
             this.colGhiChu.Name = "colGhiChu";
             // 
-            // dtpNgaySinh
-            // 
-            this.dtpNgaySinh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(628, 44);
-            this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 29);
-            this.dtpNgaySinh.TabIndex = 50;
-            // 
-            // rdbNam
-            // 
-            this.rdbNam.AutoSize = true;
-            this.rdbNam.Checked = true;
-            this.rdbNam.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdbNam.Location = new System.Drawing.Point(141, 174);
-            this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(67, 26);
-            this.rdbNam.TabIndex = 51;
-            this.rdbNam.Text = "Nam";
-            this.rdbNam.UseVisualStyleBackColor = true;
-            // 
-            // rdbNu
-            // 
-            this.rdbNu.AutoSize = true;
-            this.rdbNu.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rdbNu.Location = new System.Drawing.Point(226, 174);
-            this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(53, 26);
-            this.rdbNu.TabIndex = 51;
-            this.rdbNu.Text = "Nữ";
-            this.rdbNu.UseVisualStyleBackColor = true;
-            // 
             // frm_Quanlyhocsinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1339, 841);
+            this.ClientSize = new System.Drawing.Size(1339, 750);
             this.Controls.Add(this.dgvQLHS);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);

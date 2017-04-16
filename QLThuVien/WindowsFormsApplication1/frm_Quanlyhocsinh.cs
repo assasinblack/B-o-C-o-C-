@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
-using WindowsFormsApplication1.Bussiness;
+
 using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
@@ -20,51 +20,99 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        KetNoiDT dt = new KetNoiDT();
+        
 
-        //BLL_HocSinh bd;
-        //DataTable dtdshosinh;
-        //string err = "";
-        //public void HienThiDS()
-        //{
-        //    dtdshosinh = new DataTable();
-        //    dtdshosinh = bd.GetDSHocSinh(ref err);
-        //    dgvQLHS.DataSource = dtdshosinh.DefaultView;
-        //}
+        KetNoiDT dt = new KetNoiDT();
         private void frm_quanlysinhvien_Load(object sender, EventArgs e)
         {
-            //HienThiDS();
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
+            dgvQLHS.DataSource = dulieu;
+            
         }
-        BLL_HocSinh bd;
-        DataTable dtdshosinh;
-        string err = "";
-
-        public void HienThiDS()
+       
+        private void resettext()
         {
-            DataTable hs = dt.sqlLayDuLieu("PSP_HocSinh_Select");
-            dgvQLHS.DataSource = hs;
+            txtMaHS.Text = "";
+            txtHoTen.Text = "";
+            txtDienThoai.Text = "";
+            txtDiaChi.Text = "";
+            txtGhiChu.Text = "";
         }
-        /*private void frm_quanlysinhvien_Load(object sender, EventArgs e)
-        {
-            HienThiDS();
-
-        }*/
+        
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        private bool GioiTinh()
+        {
+            if (rdbNam.Checked == true)
+                return true;
+            else
+                return false;
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            SqlParameter pa1 = new SqlParameter("@MaHS", txtMaHS.Text);
-            SqlParameter pa2 = new SqlParameter("@HoTenHS", txtMaHS.Text);
-            SqlParameter pa3 = new SqlParameter("@GioiTinh", txtMaHS.Text);
-            SqlParameter pa4 = new SqlParameter("@NgaySinh", txtMaHS.Text);
-            SqlParameter pa5 = new SqlParameter("@DiaChi", txtMaHS.Text);
-            SqlParameter pa6 = new SqlParameter("@DienThoai", txtMaHS.Text);
-            SqlParameter pa7 = new SqlParameter("@GhiChu", txtGhiChu.Text);
-            dt.sqlThucThi("sqlThucThi");
+            SqlParameter para1 = new SqlParameter("@MaHS", txtMaHS.Text);
+            SqlParameter para2 = new SqlParameter("@HoTenHS", txtHoTen.Text);
+            SqlParameter para3 = new SqlParameter("@GioiTinh", GioiTinh());
+            SqlParameter para4 = new SqlParameter("@NgaySinh", dtpNgaySinh.Text);
+            SqlParameter para5 = new SqlParameter("@DiaChi", txtDiaChi.Text);
+            SqlParameter para6 = new SqlParameter("@DienThoai", txtDienThoai.Text);
+            SqlParameter para7 = new SqlParameter("@GhiChu", txtGhiChu.Text);
+            dt.sqlThucThi("PSP_HocSinh_Insert", para1, para2, para3, para4, para5, para6, para7);
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
+            dgvQLHS.DataSource = dulieu;
+            resettext();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            SqlParameter para1 = new SqlParameter("@MaHS", txtMaHS.Text);
+            SqlParameter para2 = new SqlParameter("@HoTenHS", txtHoTen.Text);
+            SqlParameter para3 = new SqlParameter("@GioiTinh", GioiTinh());
+            SqlParameter para4 = new SqlParameter("@NgaySinh", dtpNgaySinh.Text);
+            SqlParameter para5 = new SqlParameter("@DiaChi", txtDiaChi.Text);
+            SqlParameter para6 = new SqlParameter("@DienThoai", txtDienThoai.Text);
+            SqlParameter para7 = new SqlParameter("@GhiChu", txtGhiChu.Text);
+            dt.sqlThucThi("PSP_HocSinh_Update", para1, para2, para3, para4, para5, para6, para7);
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
+            dgvQLHS.DataSource = dulieu;
+            resettext();
+        }
+
+        private void dgvQLHS_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaHS.Text = dgvQLHS.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtHoTen.Text = dgvQLHS.Rows[e.RowIndex].Cells[1].Value.ToString();
+            if (dgvQLHS.Rows[e.RowIndex].Cells[2].Value.Equals(true))
+            {
+                rdbNam.Checked = true;
+                rdbNu.Checked = false;
+            }
+            else
+            {
+                rdbNam.Checked = false;
+                rdbNu.Checked = true;
+            }
+            dtpNgaySinh.Text = dgvQLHS.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtDiaChi.Text = dgvQLHS.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtDienThoai.Text = dgvQLHS.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtGhiChu.Text = dgvQLHS.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            SqlParameter para1 = new SqlParameter("@MaHS", txtMaHS.Text);
+            dt.sqlThucThi("PSP_HocSinh_Delete", para1);
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
+            dgvQLHS.DataSource = dulieu;
+            resettext();
         }
     }
 }

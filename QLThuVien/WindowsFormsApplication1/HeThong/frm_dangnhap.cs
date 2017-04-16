@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1.HeThong
             else
             {
                 frm_Main frm = new frm_Main();
-                frm.ShowDialog();
+                frm.Show();
                 this.Hide();
             }
         }

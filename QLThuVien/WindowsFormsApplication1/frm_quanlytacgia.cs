@@ -9,8 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
-using WindowsFormsApplication1.Bussiness;
-using WindowsFormsApplication1.DTO;
+
+
 
 namespace WindowsFormsApplication1
 {

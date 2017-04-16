@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
-using System.Data;
+
 using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
