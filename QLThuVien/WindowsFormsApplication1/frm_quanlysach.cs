@@ -28,6 +28,7 @@ namespace WindowsFormsApplication1
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             frm_capnhat _them = new frm_capnhat();
+            _them.them = true;
             _them.ShowDialog();
         }
 
