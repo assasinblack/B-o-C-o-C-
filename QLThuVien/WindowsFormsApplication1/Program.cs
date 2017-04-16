@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_quanlysach());
+            Application.Run(new Frm_MuonTraSach());
         }
     }
 }

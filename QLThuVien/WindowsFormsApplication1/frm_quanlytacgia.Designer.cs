@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bntxoa = new System.Windows.Forms.Button();
+            this.bntsua = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,8 +41,6 @@
             this.dgvTacGia = new System.Windows.Forms.DataGridView();
             this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bntsua = new System.Windows.Forms.Button();
-            this.bntxoa = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(772, 142);
             this.panel1.TabIndex = 3;
+            // 
+            // bntxoa
+            // 
+            this.bntxoa.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bntxoa.Image = global::WindowsFormsApplication1.Properties.Resources.Delete_Filled_50;
+            this.bntxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntxoa.Location = new System.Drawing.Point(389, 63);
+            this.bntxoa.Name = "bntxoa";
+            this.bntxoa.Size = new System.Drawing.Size(129, 65);
+            this.bntxoa.TabIndex = 22;
+            this.bntxoa.Text = "Xóa";
+            this.bntxoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bntxoa.UseVisualStyleBackColor = true;
+            this.bntxoa.Click += new System.EventHandler(this.bntxoa_Click);
+            // 
+            // bntsua
+            // 
+            this.bntsua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bntsua.Image = global::WindowsFormsApplication1.Properties.Resources.Edit_Property_Filled_50;
+            this.bntsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntsua.Location = new System.Drawing.Point(215, 63);
+            this.bntsua.Name = "bntsua";
+            this.bntsua.Size = new System.Drawing.Size(129, 65);
+            this.bntsua.TabIndex = 21;
+            this.bntsua.Text = "Sửa";
+            this.bntsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bntsua.UseVisualStyleBackColor = true;
+            this.bntsua.Click += new System.EventHandler(this.bntsua_Click);
             // 
             // btnExit
             // 
@@ -167,34 +195,6 @@
             this.HoTenTG.DataPropertyName = "HoTenTG";
             this.HoTenTG.HeaderText = "Họ tên tác giả";
             this.HoTenTG.Name = "HoTenTG";
-            // 
-            // bntsua
-            // 
-            this.bntsua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bntsua.Image = global::WindowsFormsApplication1.Properties.Resources.Save_Filled_50;
-            this.bntsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntsua.Location = new System.Drawing.Point(193, 63);
-            this.bntsua.Name = "bntsua";
-            this.bntsua.Size = new System.Drawing.Size(129, 65);
-            this.bntsua.TabIndex = 21;
-            this.bntsua.Text = "Sửa";
-            this.bntsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bntsua.UseVisualStyleBackColor = true;
-            this.bntsua.Click += new System.EventHandler(this.bntsua_Click);
-            // 
-            // bntxoa
-            // 
-            this.bntxoa.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bntxoa.Image = global::WindowsFormsApplication1.Properties.Resources.Save_Filled_50;
-            this.bntxoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntxoa.Location = new System.Drawing.Point(374, 63);
-            this.bntxoa.Name = "bntxoa";
-            this.bntxoa.Size = new System.Drawing.Size(129, 65);
-            this.bntxoa.TabIndex = 22;
-            this.bntxoa.Text = "Xóa";
-            this.bntxoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bntxoa.UseVisualStyleBackColor = true;
-            this.bntxoa.Click += new System.EventHandler(this.bntxoa_Click);
             // 
             // frm_quanlytacgia
             // 

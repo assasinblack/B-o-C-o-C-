@@ -47,10 +47,7 @@ namespace WindowsFormsApplication1
 
         private void btnSeach_Click(object sender, EventArgs e)
         {
-            SqlParameter pa1=new SqlParameter("@seach",cmbLoaiSach.Text);
-            SqlParameter pa2=new SqlParameter("@seach",cmbTacGia.Text);
             SqlParameter pa3=new SqlParameter("@seach",txtSeach.Text);
-
             dt.sqlThucThi("PSP_Sach_Select", pa3);
         }
     }
