@@ -63,6 +63,7 @@ namespace WindowsFormsApplication1
             }
             DataTable id = dt.sqlLayDuLieu("SP_IDCTMuon_Max");
             lblMaMuon.Text = id.Rows[0]["MaMuonSach"].ToString();
+            btnMoi.Enabled = false;
         }
 
         private void btnChoMuon_Click(object sender, EventArgs e)
