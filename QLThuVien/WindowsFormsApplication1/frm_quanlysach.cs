@@ -48,8 +48,15 @@ namespace WindowsFormsApplication1
 
         private void btnSeach_Click(object sender, EventArgs e)
         {
-            SqlParameter pa3=new SqlParameter("@seach",txtSeach.Text);
-            dt.sqlThucThi("PSP_Sach_Select", pa3);
+            SqlParameter pa3 = new SqlParameter("@search", txtSeach.Text);
+            DataTable seach = dt.sqlLayDuLieu("PSP_QuanLySach_Search", pa3);
+            dgvSach.DataSource = seach;
+            txtSeach.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_quanlysach_Load(sender, e);
         }
     }
 }

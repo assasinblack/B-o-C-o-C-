@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSeach = new System.Windows.Forms.Button();
             this.txtSeach = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -38,7 +39,6 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvSach = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,6 +57,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1162, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh_26;
+            this.button1.Location = new System.Drawing.Point(53, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(47, 46);
+            this.button1.TabIndex = 5;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSeach
             // 
@@ -150,19 +164,6 @@
             this.dgvSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSach.Size = new System.Drawing.Size(1162, 549);
             this.dgvSach.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh_26;
-            this.button1.Location = new System.Drawing.Point(53, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 46);
-            this.button1.TabIndex = 5;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frm_quanlysach
             // 
