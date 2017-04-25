@@ -60,16 +60,11 @@ namespace WindowsFormsApplication1
             SqlParameter para3 = new SqlParameter("@matl", cmbTheLoai.Text);
             SqlParameter para4 = new SqlParameter("@matg", cmbTacGia.Text);
             SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
-            SqlParameter para6 = new SqlParameter("@ngayxuatban", dtpNgayXB.Text);
+            SqlParameter para6 = new SqlParameter("@ngayxuatban", Convert.ToDateTime(dtpNgayXB.Text));
             SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);
             dt.sqlThucThi("PSP_QuanLySach_Insert", para1, para3, para2, para7, para5, para6);
             SqlParameter para8 = new SqlParameter("@masach", txtMaSach.Text);
             dt.sqlThucThi("PSP_SachTacGia_Insert", para4, para8);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnTheLoai_Click(object sender, EventArgs e)
@@ -90,14 +85,16 @@ namespace WindowsFormsApplication1
             frm.Show();
         }
 
-        private void cmbTheLoai_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void txtGiaSach_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
         }
 
     }

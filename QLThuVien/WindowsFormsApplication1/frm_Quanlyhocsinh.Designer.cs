@@ -36,6 +36,7 @@
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
@@ -67,7 +68,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -96,6 +97,7 @@
             this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnSua);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.txtGhiChu);
@@ -162,7 +164,7 @@
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = global::WindowsFormsApplication1.Properties.Resources.Exit_Filled_50;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(1186, 147);
+            this.btnThoat.Location = new System.Drawing.Point(1188, 173);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(143, 81);
@@ -180,7 +182,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = global::WindowsFormsApplication1.Properties.Resources.Delete_Filled_50;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(1186, 44);
+            this.btnXoa.Location = new System.Drawing.Point(1188, 70);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(143, 82);
@@ -190,6 +192,24 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGreen;
+            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Image = global::WindowsFormsApplication1.Properties.Resources.Cancel_26;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(880, 40);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(84, 37);
+            this.btnCancel.TabIndex = 47;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // btnSua
             // 
             this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.Aquamarine;
@@ -198,7 +218,7 @@
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = global::WindowsFormsApplication1.Properties.Resources.Edit_Property_Filled_50;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(1019, 147);
+            this.btnSua.Location = new System.Drawing.Point(1021, 173);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(146, 81);
@@ -216,7 +236,7 @@
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = global::WindowsFormsApplication1.Properties.Resources.Add_Filled_50;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(1019, 44);
+            this.btnThem.Location = new System.Drawing.Point(1021, 70);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(146, 82);
@@ -232,7 +252,7 @@
             this.txtGhiChu.Location = new System.Drawing.Point(141, 232);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(750, 29);
+            this.txtGhiChu.Size = new System.Drawing.Size(855, 29);
             this.txtGhiChu.TabIndex = 45;
             // 
             // txtDienThoai
@@ -240,9 +260,11 @@
             this.txtDienThoai.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtDienThoai.Location = new System.Drawing.Point(628, 172);
             this.txtDienThoai.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDienThoai.MaxLength = 11;
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(368, 29);
             this.txtDienThoai.TabIndex = 44;
+            this.txtDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDienThoai_KeyPress);
             // 
             // txtDiaChi
             // 
@@ -252,7 +274,6 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(368, 29);
             this.txtDiaChi.TabIndex = 43;
-            this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
             // 
             // txtHoTen
             // 
@@ -271,6 +292,7 @@
             this.txtMaHS.Name = "txtMaHS";
             this.txtMaHS.Size = new System.Drawing.Size(356, 29);
             this.txtMaHS.TabIndex = 39;
+            this.txtMaHS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaHS_KeyPress);
             // 
             // label8
             // 
@@ -367,6 +389,7 @@
             this.dgvQLHS.Margin = new System.Windows.Forms.Padding(4);
             this.dgvQLHS.Name = "dgvQLHS";
             this.dgvQLHS.RowHeadersVisible = false;
+            this.dgvQLHS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQLHS.Size = new System.Drawing.Size(1339, 347);
             this.dgvQLHS.TabIndex = 4;
             this.dgvQLHS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLHS_CellClick);
@@ -429,6 +452,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Quanlyhocsinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Học Sinh";
             this.Load += new System.EventHandler(this.frm_quanlysinhvien_Load);
             this.panel1.ResumeLayout(false);
@@ -471,5 +495,6 @@
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.RadioButton rdbNu;
         private System.Windows.Forms.RadioButton rdbNam;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

@@ -43,7 +43,6 @@ namespace WindowsFormsApplication1
         {
             DataTable dulieu = dt.sqlLayDuLieu("PSP_Sach_Select");
             dgvSach.DataSource = dulieu;
-                
         }
 
         private void btnSeach_Click(object sender, EventArgs e)
@@ -57,6 +56,20 @@ namespace WindowsFormsApplication1
         private void button1_Click(object sender, EventArgs e)
         {
             frm_quanlysach_Load(sender, e);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            SqlParameter masach = new SqlParameter("@MaSach", colMaSach.ToString());
+            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc muốn xóa?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                dt.sqlThucThi("PSP_SachDelete", masach);
+            }
+        }
+
+        public void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblTMP.Text = dgvSach.Rows[e.RowIndex].Cells[0].Value.ToString();       
         }
     }
 }
