@@ -94,6 +94,12 @@
     <Compile Include="HeThong\frm_dangnhap.Designer.cs">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeThong\frm_doimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\frm_doimatkhau.Designer.cs">
+      <DependentUpon>frm_doimatkhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="HeThong\frm_saoluuphuchoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_dangnhap.resx">
       <DependentUpon>frm_dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\frm_doimatkhau.resx">
+      <DependentUpon>frm_doimatkhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThong\frm_saoluuphuchoi.resx">
       <DependentUpon>frm_saoluuphuchoi.cs</DependentUpon>
