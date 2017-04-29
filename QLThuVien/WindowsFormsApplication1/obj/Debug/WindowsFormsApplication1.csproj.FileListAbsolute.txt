@@ -66,3 +66,4 @@ C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplicatio
 C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_Quanlyhocsinh.resources
 C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Frm_MuonTraSach.resources
 C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frm_Quanlyhocsinh.resources
+C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.HeThong.frm_doimatkhau.resources
