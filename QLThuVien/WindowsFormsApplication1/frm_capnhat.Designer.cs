@@ -66,7 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(536, 50);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblPanel
             // 
@@ -111,15 +110,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(536, 512);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // bntreset
             // 
-            this.bntreset.Location = new System.Drawing.Point(458, 120);
+            this.bntreset.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh_26;
+            this.bntreset.Location = new System.Drawing.Point(458, 114);
             this.bntreset.Name = "bntreset";
-            this.bntreset.Size = new System.Drawing.Size(75, 23);
+            this.bntreset.Size = new System.Drawing.Size(52, 34);
             this.bntreset.TabIndex = 9;
-            this.bntreset.Text = "reset";
             this.bntreset.UseVisualStyleBackColor = true;
             this.bntreset.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -199,7 +197,6 @@
             this.cmbTheLoai.Name = "cmbTheLoai";
             this.cmbTheLoai.Size = new System.Drawing.Size(279, 29);
             this.cmbTheLoai.TabIndex = 2;
-            this.cmbTheLoai.SelectedIndexChanged += new System.EventHandler(this.cmbTheLoai_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -228,6 +225,7 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(256, 29);
             this.txtSoLuong.TabIndex = 6;
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // txtTenSach
             // 
@@ -244,6 +242,7 @@
             this.txtGiaSach.Name = "txtGiaSach";
             this.txtGiaSach.Size = new System.Drawing.Size(256, 29);
             this.txtGiaSach.TabIndex = 4;
+            this.txtGiaSach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaSach_KeyPress);
             // 
             // txtMaSach
             // 

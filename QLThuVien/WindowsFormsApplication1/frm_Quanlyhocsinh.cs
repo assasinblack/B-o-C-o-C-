@@ -38,7 +38,39 @@ namespace WindowsFormsApplication1
             txtDiaChi.Text = "";
             txtGhiChu.Text = "";
         }
-        
+        private void KTText()
+        {
+            if (txtMaHS.Text == "")
+            {
+                MessageBox.Show("Mã học sinh trống.");
+                return;
+            }
+            if (txtMaHS.Text.Length < 5)
+            {
+                MessageBox.Show("Mã học sinh phải dài hơn 4 kí tự.");
+                return;
+            }
+            if (txtHoTen.Text == "")
+            {
+                MessageBox.Show("Họ tên học sinh trống.");
+                return;
+            }
+            if (txtDiaChi.Text == "")
+            {
+                MessageBox.Show("Địa chỉ học sinh trống.");
+                return;
+            }
+            if (txtDienThoai.Text == "")
+            {
+                MessageBox.Show("Số điện thoại học sinh trống.");
+                return;
+            }
+            if (txtDienThoai.Text.Length < 10)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ.");
+                return;
+            }
+        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -56,10 +88,11 @@ namespace WindowsFormsApplication1
             SqlParameter para1 = new SqlParameter("@MaHS", txtMaHS.Text);
             SqlParameter para2 = new SqlParameter("@HoTenHS", txtHoTen.Text);
             SqlParameter para3 = new SqlParameter("@GioiTinh", GioiTinh());
-            SqlParameter para4 = new SqlParameter("@NgaySinh", dtpNgaySinh.Text);
+            SqlParameter para4 = new SqlParameter("@NgaySinh", Convert.ToDateTime(dtpNgaySinh.Text));
             SqlParameter para5 = new SqlParameter("@DiaChi", txtDiaChi.Text);
             SqlParameter para6 = new SqlParameter("@DienThoai", txtDienThoai.Text);
             SqlParameter para7 = new SqlParameter("@GhiChu", txtGhiChu.Text);
+            KTText();
             dt.sqlThucThi("PSP_HocSinh_Insert", para1, para2, para3, para4, para5, para6, para7);
             DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
             dgvQLHS.DataSource = dulieu;
@@ -71,10 +104,11 @@ namespace WindowsFormsApplication1
             SqlParameter para1 = new SqlParameter("@MaHS", txtMaHS.Text);
             SqlParameter para2 = new SqlParameter("@HoTenHS", txtHoTen.Text);
             SqlParameter para3 = new SqlParameter("@GioiTinh", GioiTinh());
-            SqlParameter para4 = new SqlParameter("@NgaySinh", dtpNgaySinh.Text);
+            SqlParameter para4 = new SqlParameter("@NgaySinh", Convert.ToDateTime(dtpNgaySinh.Text));
             SqlParameter para5 = new SqlParameter("@DiaChi", txtDiaChi.Text);
             SqlParameter para6 = new SqlParameter("@DienThoai", txtDienThoai.Text);
             SqlParameter para7 = new SqlParameter("@GhiChu", txtGhiChu.Text);
+            KTText();
             dt.sqlThucThi("PSP_HocSinh_Update", para1, para2, para3, para4, para5, para6, para7);
             DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
             dgvQLHS.DataSource = dulieu;
@@ -101,18 +135,33 @@ namespace WindowsFormsApplication1
             txtGhiChu.Text = dgvQLHS.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
-        private void txtDiaChi_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             SqlParameter para1 = new SqlParameter("@MaHS", txtMaHS.Text);
-            dt.sqlThucThi("PSP_HocSinh_Delete", para1);
+            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc muốn xóa?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                dt.sqlThucThi("PSP_HocSinh_Delete", para1);
+            }
             DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
             dgvQLHS.DataSource = dulieu;
             resettext();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            resettext();
+        }
+
+        private void txtDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtMaHS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
