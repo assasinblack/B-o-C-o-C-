@@ -45,6 +45,13 @@ namespace WindowsFormsApplication1
             else
             {
                 lblPanel.Text = "Sửa Sách";
+                txtMaSach.Text = MaSach.ToString();
+                txtTenSach.Text = TenSach.ToString();
+                cmbTheLoai.Text = MaTL.ToString();
+                cmbTacGia.Text = MaTG.ToString();
+                txtGiaSach.Text = GiaSach.ToString();
+                dtpNgayXB.Text = NgayXuatBan.ToString(); 
+                txtSoLuong.Text = SoLuong.ToString();
             }
         }
 
@@ -96,6 +103,12 @@ namespace WindowsFormsApplication1
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
-
+        public string MaSach { set; get; }
+        public string TenSach { set; get; }
+        public string MaTL { set; get; }
+        public int MaTG { set; get; }
+        public int GiaSach { set; get; }
+        public string NgayXuatBan { set; get; }
+        public int SoLuong { set; get; }
     }
 }

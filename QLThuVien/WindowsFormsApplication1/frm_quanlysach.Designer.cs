@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTMP = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSeach = new System.Windows.Forms.Button();
             this.txtSeach = new System.Windows.Forms.TextBox();
@@ -46,7 +47,7 @@
             this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGiaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNgayXuatBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTMP = new System.Windows.Forms.Label();
+            this.colSachCon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,10 +64,19 @@
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1254, 137);
             this.panel1.TabIndex = 0;
+            // 
+            // lblTMP
+            // 
+            this.lblTMP.AutoSize = true;
+            this.lblTMP.Location = new System.Drawing.Point(279, 113);
+            this.lblTMP.Name = "lblTMP";
+            this.lblTMP.Size = new System.Drawing.Size(0, 19);
+            this.lblTMP.TabIndex = 6;
+            this.lblTMP.Visible = false;
             // 
             // button1
             // 
@@ -76,7 +86,7 @@
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.Image = global::WindowsFormsApplication1.Properties.Resources.Refresh_26;
             this.button1.Location = new System.Drawing.Point(78, 45);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(69, 67);
             this.button1.TabIndex = 5;
@@ -90,7 +100,7 @@
             this.btnSeach.Image = global::WindowsFormsApplication1.Properties.Resources.Search_Property_Filled_50;
             this.btnSeach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSeach.Location = new System.Drawing.Point(1052, 45);
-            this.btnSeach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSeach.Margin = new System.Windows.Forms.Padding(5);
             this.btnSeach.Name = "btnSeach";
             this.btnSeach.Size = new System.Drawing.Size(119, 68);
             this.btnSeach.TabIndex = 4;
@@ -103,7 +113,7 @@
             // 
             this.txtSeach.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtSeach.Location = new System.Drawing.Point(792, 65);
-            this.txtSeach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtSeach.Margin = new System.Windows.Forms.Padding(5);
             this.txtSeach.Name = "txtSeach";
             this.txtSeach.Size = new System.Drawing.Size(240, 29);
             this.txtSeach.TabIndex = 3;
@@ -164,7 +174,7 @@
             this.panel2.Controls.Add(this.dgvSach);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 137);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1254, 454);
             this.panel2.TabIndex = 1;
@@ -181,16 +191,16 @@
             this.colHoTenTG,
             this.colSoLuong,
             this.colGiaSach,
-            this.colNgayXuatBan});
+            this.colNgayXuatBan,
+            this.colSachCon});
             this.dgvSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSach.Location = new System.Drawing.Point(0, 0);
-            this.dgvSach.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvSach.Margin = new System.Windows.Forms.Padding(5);
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.RowHeadersVisible = false;
             this.dgvSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSach.Size = new System.Drawing.Size(1254, 454);
             this.dgvSach.TabIndex = 0;
-            this.dgvSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSach_CellClick);
             // 
             // colMaSach
             // 
@@ -241,14 +251,10 @@
             this.colNgayXuatBan.HeaderText = "Ngày xuất bản";
             this.colNgayXuatBan.Name = "colNgayXuatBan";
             // 
-            // lblTMP
+            // colSachCon
             // 
-            this.lblTMP.AutoSize = true;
-            this.lblTMP.Location = new System.Drawing.Point(279, 113);
-            this.lblTMP.Name = "lblTMP";
-            this.lblTMP.Size = new System.Drawing.Size(0, 19);
-            this.lblTMP.TabIndex = 6;
-            this.lblTMP.Visible = false;
+            this.colSachCon.HeaderText = "Sách còn";
+            this.colSachCon.Name = "colSachCon";
             // 
             // frm_quanlysach
             // 
@@ -259,7 +265,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frm_quanlysach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Sách";
@@ -287,6 +293,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvSach;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblTMP;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaTL;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenSach;
@@ -294,7 +301,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayXuatBan;
-        private System.Windows.Forms.Label lblTMP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSachCon;
 
     }
 }

@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
-
 using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
@@ -34,9 +33,16 @@ namespace WindowsFormsApplication1
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            frm_capnhat _them = new frm_capnhat();
-            _them.them = false;
-            _them.ShowDialog();
+            frm_capnhat sua = new frm_capnhat();
+            sua.them = false;
+            sua.ShowDialog();
+            sua.MaSach = dgvSach.CurrentRow.Cells[0].Value.ToString();
+            sua.TenSach = dgvSach.CurrentRow.Cells[1].Value.ToString();
+            sua.MaTL = dgvSach.CurrentRow.Cells[2].Value.ToString();
+            sua.MaTG = Convert.ToInt32(dgvSach.CurrentRow.Cells[3].Value.ToString());
+            sua.GiaSach = Convert.ToInt32(dgvSach.CurrentRow.Cells[4].Value.ToString());
+            sua.NgayXuatBan = dgvSach.CurrentRow.Cells[5].Value.ToString();
+            sua.SoLuong = Convert.ToInt32(dgvSach.CurrentRow.Cells[6].Value.ToString());
         }
         KetNoiDT dt = new KetNoiDT();
         private void frm_quanlysach_Load(object sender, EventArgs e)
@@ -65,11 +71,6 @@ namespace WindowsFormsApplication1
             {
                 dt.sqlThucThi("PSP_SachDelete", masach);
             }
-        }
-
-        public void dgvSach_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            lblTMP.Text = dgvSach.Rows[e.RowIndex].Cells[0].Value.ToString();       
         }
     }
 }
