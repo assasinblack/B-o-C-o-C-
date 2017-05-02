@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1.HeThong
         {
             SqlParameter para1 = new SqlParameter("@taikhoan", txtuser.Text);
             SqlParameter para2 = new SqlParameter("@matkhau", txtpass.Text);
-            DataTable dulieu= dt.sqlLayDuLieu("PSP_NhanVien_test",para1,para2);
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_NhanVien_test", para1, para2);
             if (dulieu.Rows.Count < 1)
             {
                 MessageBox.Show("Tài khoản không đúng !");
