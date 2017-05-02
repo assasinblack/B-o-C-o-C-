@@ -17,11 +17,9 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new frm_dangnhap());
-=======
-            Application.Run(new frm_quanlysach());
->>>>>>> origin/master
+
+            Application.Run(new frm_saoluuphuchoi());
+
         }
     }
 }

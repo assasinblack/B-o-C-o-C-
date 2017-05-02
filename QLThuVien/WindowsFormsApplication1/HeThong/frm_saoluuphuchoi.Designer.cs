@@ -66,7 +66,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(580, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-
             // 
             // btnsaoluu
             // 
@@ -76,7 +75,7 @@
             this.btnsaoluu.Name = "btnsaoluu";
             this.btnsaoluu.Size = new System.Drawing.Size(74, 22);
             this.btnsaoluu.Text = "Sao lưu";
-
+            this.btnsaoluu.Click += new System.EventHandler(this.btnsaoluu_Click);
             // 
             // tsbthoat
             // 
@@ -86,7 +85,6 @@
             this.tsbthoat.Name = "tsbthoat";
             this.tsbthoat.Size = new System.Drawing.Size(63, 22);
             this.tsbthoat.Text = "Thoát";
-
             // 
             // lblpanel
             // 
@@ -127,7 +125,7 @@
             this.btnlayfile.TabIndex = 5;
             this.btnlayfile.Text = "Browers";
             this.btnlayfile.UseVisualStyleBackColor = true;
-     
+            this.btnlayfile.Click += new System.EventHandler(this.btnlayfile_Click);
             // 
             // frm_saoluuphuchoi
             // 
@@ -143,7 +141,7 @@
             this.Name = "frm_saoluuphuchoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sao Lưu - Phục Hồi";
-       
+            this.Load += new System.EventHandler(this.frm_saoluuphuchoi_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
