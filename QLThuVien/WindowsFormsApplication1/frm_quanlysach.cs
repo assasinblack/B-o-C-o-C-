@@ -30,19 +30,32 @@ namespace WindowsFormsApplication1
             _them.them = true;
             _them.ShowDialog();
         }
-
+        DTO.DTO_Sach sach;
+        private void setToDTOSach(DataGridViewRow dt)
+        {
+            sach = new DTO.DTO_Sach();
+            sach.maSach = dt.Cells["colMaSach"].Value.ToString();
+            sach.maTL = dt.Cells["colMaTL"].Value.ToString();
+            sach.tenSach = dt.Cells["colTenSach"].Value.ToString();
+            sach.hoTenTG = dt.Cells["colHoTenTG"].Value.ToString();
+            sach.soLuong = Convert.ToInt32(dt.Cells["colSoLuong"].Value.ToString());
+            sach.giaSach = Convert.ToInt32(dt.Cells["colGiaSach"].Value.ToString());
+            sach.ngayXuatBan = dt.Cells["colNgayXuatBan"].Value.ToString();
+        }
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            frm_capnhat sua = new frm_capnhat();
-            sua.them = false;
-            sua.ShowDialog();
-            sua.MaSach = dgvSach.CurrentRow.Cells[0].Value.ToString();
-            sua.TenSach = dgvSach.CurrentRow.Cells[1].Value.ToString();
-            sua.MaTL = dgvSach.CurrentRow.Cells[2].Value.ToString();
-            sua.MaTG = Convert.ToInt32(dgvSach.CurrentRow.Cells[3].Value.ToString());
-            sua.GiaSach = Convert.ToInt32(dgvSach.CurrentRow.Cells[4].Value.ToString());
-            sua.NgayXuatBan = dgvSach.CurrentRow.Cells[5].Value.ToString();
-            sua.SoLuong = Convert.ToInt32(dgvSach.CurrentRow.Cells[6].Value.ToString());
+            if (sach != null)
+            {
+                frm_capnhat sua = new frm_capnhat();
+                sua.them = false;
+                sua.sach = this.sach;
+                sua.ShowDialog();
+                DataTable dulieu = dt.sqlLayDuLieu("PSP_Sach_Select");
+                dgvSach.DataSource = dulieu;
+                this.sach = null;
+            }
+            else
+                MessageBox.Show("Chưa chọn sách cần sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         KetNoiDT dt = new KetNoiDT();
         private void frm_quanlysach_Load(object sender, EventArgs e)
@@ -61,16 +74,33 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frm_quanlysach_Load(sender, e);
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_Sach_Select");
+            dgvSach.DataSource = dulieu;
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            SqlParameter masach = new SqlParameter("@MaSach", colMaSach.ToString());
-            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc muốn xóa?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            try
             {
-                dt.sqlThucThi("PSP_SachDelete", masach);
+                SqlParameter masach = new SqlParameter("@MaSach", sach.maSach);
+                SqlParameter sachma = new SqlParameter("@MaSach", sach.maSach);
+                SqlParameter hoten = new SqlParameter("@HoTenTG", sach.hoTenTG);
+                if (DialogResult.Yes == MessageBox.Show("Bạn có chắc muốn xóa?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    dt.sqlThucThi("PSP_SachTG_Delete", sachma, hoten);
+                    dt.sqlThucThi("PSP_SachDelete", masach);
+                    MessageBox.Show("Đã xoá");
+                }
             }
+            catch
+            {
+                MessageBox.Show("Sách đang mượn không thể xoá","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void dgvSach_Click(object sender, EventArgs e)
+        {
+            setToDTOSach(dgvSach.CurrentRow);
         }
     }
 }

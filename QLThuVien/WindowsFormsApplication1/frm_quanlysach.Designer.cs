@@ -201,6 +201,7 @@
             this.dgvSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSach.Size = new System.Drawing.Size(1254, 454);
             this.dgvSach.TabIndex = 0;
+            this.dgvSach.Click += new System.EventHandler(this.dgvSach_Click);
             // 
             // colMaSach
             // 

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Cls_Main.cs" />
     <Compile Include="Cls_DataLayer.cs" />
+    <Compile Include="DTO\DTO_Sach.cs" />
     <Compile Include="frm_Main.cs">
       <SubType>Form</SubType>
     </Compile>
