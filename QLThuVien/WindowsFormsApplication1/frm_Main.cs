@@ -19,15 +19,6 @@ namespace WindowsFormsApplication1
         }
         //string err = "";
         public static string tennhanvien;
-        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -87,6 +78,12 @@ namespace WindowsFormsApplication1
         private void frm_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frm_saoluuphuchoi phuchoi = new frm_saoluuphuchoi();
+            phuchoi.ShowDialog();
         }
       
     }
