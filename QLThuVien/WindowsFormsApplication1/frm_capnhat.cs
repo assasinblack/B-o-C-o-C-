@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         }
         public bool them = true;
         KetNoiDT dt = new KetNoiDT();
-
+        public DTO.DTO_Sach sach = new DTO.DTO_Sach();
         private void loadCMB()
         {
             DataTable dulieu = dt.sqlLayDuLieu("PSP_TheLoaiSach_Select1");
@@ -45,13 +45,7 @@ namespace WindowsFormsApplication1
             else
             {
                 lblPanel.Text = "Sửa Sách";
-                txtMaSach.Text = MaSach.ToString();
-                txtTenSach.Text = TenSach.ToString();
-                cmbTheLoai.Text = MaTL.ToString();
-                cmbTacGia.Text = MaTG.ToString();
-                txtGiaSach.Text = GiaSach.ToString();
-                dtpNgayXB.Text = NgayXuatBan.ToString(); 
-                txtSoLuong.Text = SoLuong.ToString();
+                setControl(sach);
             }
         }
 
@@ -59,19 +53,40 @@ namespace WindowsFormsApplication1
         {
             this.Close();
         }
-       
+        private void setControl(DTO.DTO_Sach sach)
+        {
+            if(!string.IsNullOrEmpty(sach.maSach))
+            {
+                txtMaSach.Text = sach.maSach;
+                txtTenSach.Text = sach.tenSach;
+                cmbTheLoai.SelectedValue = sach.maTL.ToString();
+                cmbTacGia.SelectedValue = sach.hoTenTG.ToString();
+                txtGiaSach.Text = Convert.ToInt32(sach.giaSach).ToString();
+                dtpNgayXB.Text = sach.ngayXuatBan;
+                txtSoLuong.Text = Convert.ToInt32(sach.soLuong).ToString();
+            }
+        }
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            SqlParameter para1 = new SqlParameter("@masach", txtMaSach.Text);
-            SqlParameter para2 = new SqlParameter("@tensach", txtTenSach.Text);
-            SqlParameter para3 = new SqlParameter("@matl", cmbTheLoai.Text);
-            SqlParameter para4 = new SqlParameter("@matg", cmbTacGia.Text);
-            SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
-            SqlParameter para6 = new SqlParameter("@ngayxuatban", Convert.ToDateTime(dtpNgayXB.Text));
-            SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);
-            dt.sqlThucThi("PSP_QuanLySach_Insert", para1, para3, para2, para7, para5, para6);
-            SqlParameter para8 = new SqlParameter("@masach", txtMaSach.Text);
-            dt.sqlThucThi("PSP_SachTacGia_Insert", para4, para8);
+            if (them == true)
+            {
+                SqlParameter para1 = new SqlParameter("@masach", txtMaSach.Text);
+                SqlParameter para2 = new SqlParameter("@tensach", txtTenSach.Text);
+                SqlParameter para3 = new SqlParameter("@matl", cmbTheLoai.Text);
+                SqlParameter para4 = new SqlParameter("@matg", cmbTacGia.Text);
+                SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
+                SqlParameter para6 = new SqlParameter("@ngayxuatban", Convert.ToDateTime(dtpNgayXB.Text));
+                SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);
+                dt.sqlThucThi("PSP_QuanLySach_Insert", para1, para3, para2, para7, para5, para6);
+                SqlParameter para8 = new SqlParameter("@masach", txtMaSach.Text);
+                dt.sqlThucThi("PSP_SachTacGia_Insert", para4, para8);
+                MessageBox.Show("Thêm thành công");
+                this.Close();
+            }
+            else
+            {
+
+            }
         }
 
         private void btnTheLoai_Click(object sender, EventArgs e)
@@ -103,12 +118,5 @@ namespace WindowsFormsApplication1
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
                 e.Handled = true;
         }
-        public string MaSach { set; get; }
-        public string TenSach { set; get; }
-        public string MaTL { set; get; }
-        public int MaTG { set; get; }
-        public int GiaSach { set; get; }
-        public string NgayXuatBan { set; get; }
-        public int SoLuong { set; get; }
     }
 }

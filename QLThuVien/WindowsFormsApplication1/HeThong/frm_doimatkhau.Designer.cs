@@ -42,10 +42,10 @@
             // 
             // bntdoimatkhau
             // 
-            this.bntdoimatkhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntdoimatkhau.Location = new System.Drawing.Point(50, 237);
+            this.bntdoimatkhau.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntdoimatkhau.Location = new System.Drawing.Point(51, 222);
             this.bntdoimatkhau.Name = "bntdoimatkhau";
-            this.bntdoimatkhau.Size = new System.Drawing.Size(112, 36);
+            this.bntdoimatkhau.Size = new System.Drawing.Size(147, 51);
             this.bntdoimatkhau.TabIndex = 0;
             this.bntdoimatkhau.Text = "Lưu";
             this.bntdoimatkhau.UseVisualStyleBackColor = true;
@@ -129,10 +129,10 @@
             // 
             // bntthoat
             // 
-            this.bntthoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntthoat.Location = new System.Drawing.Point(235, 237);
+            this.bntthoat.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntthoat.Location = new System.Drawing.Point(236, 222);
             this.bntthoat.Name = "bntthoat";
-            this.bntthoat.Size = new System.Drawing.Size(112, 36);
+            this.bntthoat.Size = new System.Drawing.Size(147, 51);
             this.bntthoat.TabIndex = 10;
             this.bntthoat.Text = "Thoát";
             this.bntthoat.UseVisualStyleBackColor = true;
@@ -142,6 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(438, 285);
             this.Controls.Add(this.bntthoat);
             this.Controls.Add(this.label4);
@@ -154,6 +155,7 @@
             this.Controls.Add(this.txtmkcu);
             this.Controls.Add(this.bntdoimatkhau);
             this.Name = "frm_doimatkhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_doimatkhau";
             this.Load += new System.EventHandler(this.frm_doimatkhau_Load);
             this.ResumeLayout(false);

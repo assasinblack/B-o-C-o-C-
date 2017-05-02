@@ -60,7 +60,8 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            frm_doimatkhau _mk = new frm_doimatkhau();
+            _mk.ShowDialog();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
