@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
+using WindowsFormsApplication1.HeThong;
 
 
 
@@ -16,6 +17,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frm_quanlytacgia : Form
     {
+       
         public frm_quanlytacgia()
         {
             InitializeComponent();
@@ -31,6 +33,15 @@ namespace WindowsFormsApplication1
         {
             DataTable dulieu = dt.sqlLayDuLieu("PSP_TacGia_Select");
             dgvTacGia.DataSource = dulieu;
+            if (frm_dangnhap.quyen.ToString() == "admin")
+            {
+
+            }
+            if (frm_dangnhap.quyen.ToString() == "khoa")
+            {
+                btnCapNhat.Enabled = false;
+            }
+        
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -71,6 +82,7 @@ namespace WindowsFormsApplication1
             txtMaTG.Text = "";
 
         }
+       
 
     }
 }
