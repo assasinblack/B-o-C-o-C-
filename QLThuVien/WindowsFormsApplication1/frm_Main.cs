@@ -24,6 +24,22 @@ namespace WindowsFormsApplication1
         {
             frm_dangnhap _login = new frm_dangnhap();
             _login.Close();
+            if (frm_dangnhap.quyen.ToString() == "1")
+            {
+
+            }
+            if (frm_dangnhap.quyen.ToString() == "2")
+            {
+                
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                button5.Enabled = false;
+                btnQLHS.Enabled = false;
+                btnTacGia.Enabled = false;
+                btnMuonTraSach.Enabled = false;
+                btnSach.Enabled = false;
+            }
         }
 
         private void btnSach_Click(object sender, EventArgs e)

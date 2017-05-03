@@ -33,14 +33,7 @@ namespace WindowsFormsApplication1
         {
             DataTable dulieu = dt.sqlLayDuLieu("PSP_TacGia_Select");
             dgvTacGia.DataSource = dulieu;
-            if (frm_dangnhap.quyen.ToString() == "admin")
-            {
-
-            }
-            if (frm_dangnhap.quyen.ToString() != "admin")
-            {
-                btnCapNhat.Enabled = false;
-            }
+           
         
         }
 
