@@ -156,7 +156,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightBlue;
+            this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.groupBox2.Controls.Add(this.lblMaHS);
             this.groupBox2.Controls.Add(this.lblMaMuon);
             this.groupBox2.Controls.Add(this.btnLoad1);
@@ -324,7 +324,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightBlue;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.groupBox1.Controls.Add(this.lblNgayXB);
             this.groupBox1.Controls.Add(this.lblSLuong);
             this.groupBox1.Controls.Add(this.lblTacGia);
