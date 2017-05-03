@@ -91,6 +91,11 @@ namespace WindowsFormsApplication1
 
         private void btnXemSach_Click(object sender, EventArgs e)
         {
+            lblMaSach.Text = "";
+            lblGia.Text = "";
+            lblSLuong.Text = "";
+            lblNgayXB.Text = "";
+            lblTacGia.Text = "";
             SqlParameter Tensach = new SqlParameter("@TenSach", cmbTenSach.Text);
             DataTable show = dt.sqlLayDuLieu("PSP_Sach_Show", Tensach);
             lblMaSach.Text = show.Rows[0]["MaSach"].ToString();

@@ -162,11 +162,8 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 81);
             this.button2.TabIndex = 4;
-<<<<<<< HEAD
             this.button2.Text = "Sau lưu      ";
-=======
             this.button2.Text = "Sao lưu";
->>>>>>> origin/master
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);

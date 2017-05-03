@@ -57,10 +57,12 @@ namespace WindowsFormsApplication1
         {
             if(!string.IsNullOrEmpty(sach.maSach))
             {
+                SqlParameter pa = new SqlParameter("HoTenTG",sach.hoTenTG);
+                DataTable tg = dt.sqlLayDuLieu("PSP_ShowMaTG",pa);
                 txtMaSach.Text = sach.maSach;
                 txtTenSach.Text = sach.tenSach;
-                cmbTheLoai.SelectedValue = sach.maTL.ToString();
-                cmbTacGia.SelectedValue = sach.hoTenTG.ToString();
+                cmbTheLoai.SelectedItem = sach.maTL.ToString();
+                cmbTacGia.SelectedItem = tg.Rows[0]["MaTG"].ToString();
                 txtGiaSach.Text = Convert.ToInt32(sach.giaSach).ToString();
                 dtpNgayXB.Text = sach.ngayXuatBan;
                 txtSoLuong.Text = Convert.ToInt32(sach.soLuong).ToString();
@@ -93,7 +95,6 @@ namespace WindowsFormsApplication1
         {
             frrm_Theloaisach frm = new frrm_Theloaisach();
             frm.Show();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
