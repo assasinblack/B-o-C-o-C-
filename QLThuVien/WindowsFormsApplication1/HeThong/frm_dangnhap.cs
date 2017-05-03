@@ -25,14 +25,18 @@ namespace WindowsFormsApplication1.HeThong
             SqlParameter para1 = new SqlParameter("@taikhoan", txtuser.Text);
             SqlParameter para2 = new SqlParameter("@matkhau", txtpass.Text);
             DataTable dulieu = dt.sqlLayDuLieu("PSP_NhanVien_test", para1, para2);
-            quyen = txtuser.Text;
+            SqlParameter para3 = new SqlParameter("@TaiKhoan", txtuser.Text);
+            DataTable dulieu1 = dt.sqlLayDuLieu("PSP_NhanVien_Loai",para3);
+
+            quyen = dulieu1.ToString();
+            
             if (dulieu.Rows.Count < 1)
             {
                 MessageBox.Show("Tài khoản không đúng !");
             }
             else
             {
-                frm_Main frm = new frm_Main();
+                  frm_Main frm = new frm_Main();
                 frm.Show();
                 this.Hide();
             }
