@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1.HeThong
             SqlParameter para3 = new SqlParameter("@TaiKhoan", txtuser.Text);
             DataTable dulieu1 = dt.sqlLayDuLieu("PSP_NhanVien_Loai",para3);
 
-            quyen = dulieu1.ToString();
+            quyen = dulieu1.Rows[0]["LoaiTK"].ToString();
             
             if (dulieu.Rows.Count < 1)
             {
