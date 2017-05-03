@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
             {
 
             }
-            if (frm_dangnhap.quyen.ToString() == "khoa")
+            if (frm_dangnhap.quyen.ToString() != "admin")
             {
                 btnCapNhat.Enabled = false;
             }
