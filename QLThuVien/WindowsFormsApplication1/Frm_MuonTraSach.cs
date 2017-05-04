@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
         KetNoiDT dt = new KetNoiDT();
         private void enable(bool a)
         {
-            cmbHoTenHS.Enabled = dtpMuon.Enabled = dtpTra.Enabled = txtSoLuongMuon.Enabled = btnChoMuon.Enabled = a;
+            cmbHoTenHS.Enabled = dtpTra.Enabled = txtSoLuongMuon.Enabled = btnChoMuon.Enabled = a;
         }
         private void lockTra()
         {
@@ -66,43 +66,60 @@ namespace WindowsFormsApplication1
             btnMoi.Enabled = false;
         }
 
+        
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
-            SqlParameter HoTen = new SqlParameter("@HoTenHS", cmbHoTenHS.Text);
-            DataTable mshs=dt.sqlLayDuLieu("PsP_MaHS_Select",HoTen);
-            lblMaHS.Text = mshs.Rows[0]["MaHS"].ToString();
-            SqlParameter MaMuonSach = new SqlParameter("@MaMuonSach", lblMaMuon.Text);
-            SqlParameter MaSach = new SqlParameter("@MaSach", lblMaSach.Text);
-            SqlParameter MaHS = new SqlParameter("@MaHS", lblMaHS.Text);
-            SqlParameter Muon = new SqlParameter("@NgayMuon", Convert.ToDateTime(dtpMuon.Text));
-            SqlParameter HenTra = new SqlParameter("@NgayHenTra", Convert.ToDateTime(dtpTra.Text));
-            SqlParameter Tra = new SqlParameter("@NgayTra","");
-            dt.sqlThucThi("PSP_ChiTietMuon_Insert", MaMuonSach, MaSach, MaHS, Muon, HenTra, Tra);
+            try
+            {
+                SqlParameter HoTen = new SqlParameter("@HoTenHS", cmbHoTenHS.Text);
+                DataTable mshs = dt.sqlLayDuLieu("PsP_MaHS_Select", HoTen);
+                lblMaHS.Text = mshs.Rows[0]["MaHS"].ToString();
+                SqlParameter MaMuonSach = new SqlParameter("@MaMuonSach", lblMaMuon.Text);
+                SqlParameter MaSach = new SqlParameter("@MaSach", lblMaSach.Text);
+                SqlParameter MaHS = new SqlParameter("@MaHS", lblMaHS.Text);
+                SqlParameter SLMuon = new SqlParameter("@SLMuon", txtSoLuongMuon.Text);
+                SqlParameter Muon = new SqlParameter("@NgayMuon", Convert.ToDateTime(dtpMuon.Text));
+                SqlParameter HenTra = new SqlParameter("@NgayHenTra", Convert.ToDateTime(dtpTra.Text));
+                SqlParameter Tra = new SqlParameter("@NgayTra", "");
+                dt.sqlThucThi("PSP_ChiTietMuon_Insert", MaMuonSach, MaSach, MaHS, SLMuon, Muon, HenTra, Tra);
 
-            enable(false);
-            cmbTenSach.Text = "";
-            lblMaSach.Text = "";
-            lblGia.Text = "";
-            lblSLuong.Text = "";
-            lblNgayXB.Text = "";
-            lblTacGia.Text = "";
-            cmbHoTenHS.Text = "";
+                enable(false);
+                cmbTenSach.Text = "";
+                lblMaSach.Text = "";
+                lblGia.Text = "";
+                lblSLuong.Text = "";
+                lblNgayXB.Text = "";
+                lblTacGia.Text = "";
+                cmbHoTenHS.Text = "";
+                txtSoLuongMuon.Text = "";
+            }
+            catch
+            {
+                MessageBox.Show("Chưa đủ thông tin mượn sách", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnXemSach_Click(object sender, EventArgs e)
         {
-            lblMaSach.Text = "";
-            lblGia.Text = "";
-            lblSLuong.Text = "";
-            lblNgayXB.Text = "";
-            lblTacGia.Text = "";
-            SqlParameter Tensach = new SqlParameter("@TenSach", cmbTenSach.Text);
-            DataTable show = dt.sqlLayDuLieu("PSP_Sach_Show", Tensach);
-            lblMaSach.Text = show.Rows[0]["MaSach"].ToString();
-            lblGia.Text = show.Rows[0]["GiaSach"].ToString();
-            lblSLuong.Text = show.Rows[0]["SoLuong"].ToString();
-            lblNgayXB.Text = string.Format("{0:d}", (show.Rows[0]["NgayXuatBan"]));
-            lblTacGia.Text = show.Rows[0]["HoTenTG"].ToString();
+            try
+            {
+                lblMaSach.Text = "";
+                lblGia.Text = "";
+                lblSLuong.Text = "";
+                lblNgayXB.Text = "";
+                lblTacGia.Text = "";
+                SqlParameter Tensach = new SqlParameter("@TenSach", cmbTenSach.Text);
+                DataTable show = dt.sqlLayDuLieu("PSP_Sach_Show", Tensach);
+                lblMaSach.Text = show.Rows[0]["MaSach"].ToString();
+                lblGia.Text = show.Rows[0]["GiaSach"].ToString();
+                lblSLuong.Text = show.Rows[0]["SoLuong"].ToString();
+                lblNgayXB.Text = string.Format("{0:d}", (show.Rows[0]["NgayXuatBan"]));
+                lblTacGia.Text = show.Rows[0]["HoTenTG"].ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Bạn chưa chọn sách muốn xem", "Lỗi");
+            }
         }
 
         private void btnLoad1_Click(object sender, EventArgs e)
