@@ -20,7 +20,11 @@ namespace WindowsFormsApplication1
          
 
 
+<<<<<<< HEAD
             Application.Run(new frm_saoluuphuchoi());
+=======
+            Application.Run(new Frm_MuonTraSach());
+>>>>>>> origin/master
 
             
 

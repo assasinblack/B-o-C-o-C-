@@ -264,6 +264,7 @@
             // dtpMuon
             // 
             this.dtpMuon.CustomFormat = "";
+            this.dtpMuon.Enabled = false;
             this.dtpMuon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpMuon.Location = new System.Drawing.Point(137, 77);
             this.dtpMuon.Name = "dtpMuon";
