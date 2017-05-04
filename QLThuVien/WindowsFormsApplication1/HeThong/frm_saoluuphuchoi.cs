@@ -20,13 +20,7 @@ namespace WindowsFormsApplication1.HeThong
         {
             InitializeComponent();
         }
-        private bool backuprestore()
-        {
-            if (rdobackup.Checked == true)
-                return true;
-            else
-                return false;
-        }
+      
         private void frm_saoluuphuchoi_Load(object sender, EventArgs e)
         {
 
