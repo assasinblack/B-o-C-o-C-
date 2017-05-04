@@ -12,6 +12,7 @@ namespace WindowsFormsApplication1
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+       [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -20,11 +21,11 @@ namespace WindowsFormsApplication1
          
 
 
-<<<<<<< HEAD
-            Application.Run(new frm_saoluuphuchoi());
-=======
-            Application.Run(new Frm_MuonTraSach());
->>>>>>> origin/master
+
+            Application.Run(new frm_dangnhap());
+
+          
+
 
             
 

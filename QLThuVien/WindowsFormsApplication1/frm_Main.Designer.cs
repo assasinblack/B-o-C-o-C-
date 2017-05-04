@@ -142,7 +142,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 81);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Phục hồi";
+            this.button3.Text = "Đăng ký";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -160,18 +160,9 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.Location = new System.Drawing.Point(152, 11);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 81);
+            this.button2.Size = new System.Drawing.Size(133, 81);
             this.button2.TabIndex = 4;
-
-            this.button2.Text = "Sau lưu      ";
-            this.button2.Text = "Sao lưu";
-
-
-            this.button2.Text = "Sau lưu      ";
-
-            this.button2.Text = "Sao lưu";
-
-
+            this.button2.Text = "Sao lưu & phục hồi";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);

@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frm_saoluuphuchoi phuchoi = new frm_saoluuphuchoi();
+            frm_dangky phuchoi = new frm_dangky();
             phuchoi.ShowDialog();
         }
       
