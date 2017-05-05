@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
 
 
 
-            Application.Run(new frm_dangnhap());
+            Application.Run(new frm_quanlysach());
 
           
 

@@ -46,6 +46,7 @@ namespace WindowsFormsApplication1
             {
                 lblPanel.Text = "Sửa Sách";
                 setControl(sach);
+                txtMaSach.Enabled = false;
             }
         }
 
@@ -72,22 +73,40 @@ namespace WindowsFormsApplication1
         {
             if (them == true)
             {
-                SqlParameter para1 = new SqlParameter("@masach", txtMaSach.Text);
-                SqlParameter para2 = new SqlParameter("@tensach", txtTenSach.Text);
-                SqlParameter para3 = new SqlParameter("@matl", cmbTheLoai.Text);
-                SqlParameter para4 = new SqlParameter("@matg", cmbTacGia.Text);
-                SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
-                SqlParameter para6 = new SqlParameter("@ngayxuatban", Convert.ToDateTime(dtpNgayXB.Text));
-                SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);
-                dt.sqlThucThi("PSP_QuanLySach_Insert", para1, para3, para2, para7, para5, para6);
-                SqlParameter para8 = new SqlParameter("@masach", txtMaSach.Text);
-                dt.sqlThucThi("PSP_SachTacGia_Insert", para4, para8);
-                MessageBox.Show("Thêm thành công");
-                this.Close();
+                try
+                {
+                    SqlParameter para1 = new SqlParameter("@masach", txtMaSach.Text);
+                    SqlParameter para2 = new SqlParameter("@tensach", txtTenSach.Text);
+                    SqlParameter para3 = new SqlParameter("@matl", cmbTheLoai.Text);
+                    SqlParameter para4 = new SqlParameter("@matg", cmbTacGia.Text);
+                    SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
+                    SqlParameter para6 = new SqlParameter("@ngayxuatban", Convert.ToDateTime(dtpNgayXB.Text));
+                    SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);
+                    dt.sqlThucThi("PSP_QuanLySach_Insert", para1, para3, para2, para7, para5, para6);
+                    SqlParameter para8 = new SqlParameter("@masach", txtMaSach.Text);
+                    dt.sqlThucThi("PSP_SachTacGia_Insert", para4, para8);
+                    MessageBox.Show("Thêm thành công");
+                    this.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("Sách đã tồn tại xin nhập lại.", "Lỗi",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-
+                SqlParameter para1 = new SqlParameter("@masach", txtMaSach.Text);
+                SqlParameter para2 = new SqlParameter("@tensach", txtTenSach.Text);
+                SqlParameter para3 = new SqlParameter("@matl", cmbTheLoai.Text);              
+                SqlParameter para5 = new SqlParameter("@giasach", txtGiaSach.Text);
+                SqlParameter para6 = new SqlParameter("@ngayxuatban", Convert.ToDateTime(dtpNgayXB.Text));
+                SqlParameter para7 = new SqlParameter("@soluong", txtSoLuong.Text);
+                dt.sqlThucThi("PSP_UpdateSach", para1, para3, para2, para7, para5, para6);
+                SqlParameter para4 = new SqlParameter("@matg", cmbTacGia.Text);
+                SqlParameter para8 = new SqlParameter("@masach", txtMaSach.Text);
+                dt.sqlThucThi("PSP_UpdateSachTacGia", para4, para8);
+                MessageBox.Show("Sửa thành công");
+                this.Close();
             }
         }
 

@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
             {
                 cmbTenSach.Items.Add(sach.Rows[sach.Rows.Count - i]["TenSach"].ToString());
             }
-            txtMaHS.Enabled = txtMaSach.Enabled = dtpNgayMuon.Enabled = dtpNgayHenTra.Enabled = false;
+            txtMaHS.Enabled = txtMaSach.Enabled = txtMaMuon.Enabled = dtpNgayTra.Enabled = dtpNgayMuon.Enabled = dtpNgayHenTra.Enabled = false;
         }
 
         private void btnMoi_Click(object sender, EventArgs e)
@@ -69,34 +69,41 @@ namespace WindowsFormsApplication1
         
         private void btnChoMuon_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlParameter HoTen = new SqlParameter("@HoTenHS", cmbHoTenHS.Text);
-                DataTable mshs = dt.sqlLayDuLieu("PsP_MaHS_Select", HoTen);
-                lblMaHS.Text = mshs.Rows[0]["MaHS"].ToString();
-                SqlParameter MaMuonSach = new SqlParameter("@MaMuonSach", lblMaMuon.Text);
-                SqlParameter MaSach = new SqlParameter("@MaSach", lblMaSach.Text);
-                SqlParameter MaHS = new SqlParameter("@MaHS", lblMaHS.Text);
-                SqlParameter SLMuon = new SqlParameter("@SLMuon", txtSoLuongMuon.Text);
-                SqlParameter Muon = new SqlParameter("@NgayMuon", Convert.ToDateTime(dtpMuon.Text));
-                SqlParameter HenTra = new SqlParameter("@NgayHenTra", Convert.ToDateTime(dtpTra.Text));
-                SqlParameter Tra = new SqlParameter("@NgayTra", "");
-                dt.sqlThucThi("PSP_ChiTietMuon_Insert", MaMuonSach, MaSach, MaHS, SLMuon, Muon, HenTra, Tra);
+            //try
+            //{
+                SqlParameter pa=new SqlParameter("@MaSach", lblMaSach.Text);
+                DataTable sls=dt.sqlLayDuLieu("PSP_SLConLai",pa);
+                if (Convert.ToInt32(txtSoLuongMuon.Text) <= Convert.ToInt32(sls.Rows[0]["SLConLai"].ToString()))
+                {
+                    SqlParameter HoTen = new SqlParameter("@HoTenHS", cmbHoTenHS.Text);
+                    DataTable mshs = dt.sqlLayDuLieu("PsP_MaHS_Select", HoTen);
+                    lblMaHS.Text = mshs.Rows[0]["MaHS"].ToString();
+                    SqlParameter MaMuonSach = new SqlParameter("@MaMuonSach", lblMaMuon.Text);
+                    SqlParameter MaSach = new SqlParameter("@MaSach", lblMaSach.Text);
+                    SqlParameter MaHS = new SqlParameter("@MaHS", lblMaHS.Text);
+                    SqlParameter SLMuon = new SqlParameter("@SLMuon", txtSoLuongMuon.Text);
+                    SqlParameter Muon = new SqlParameter("@NgayMuon", Convert.ToDateTime(dtpMuon.Text));
+                    SqlParameter HenTra = new SqlParameter("@NgayHenTra", Convert.ToDateTime(dtpTra.Text));
+                    SqlParameter Tra = new SqlParameter("@NgayTra", "");
+                    dt.sqlThucThi("PSP_ChiTietMuon_Insert", MaMuonSach, MaSach, MaHS, SLMuon, Muon, HenTra, Tra);
 
-                enable(false);
-                cmbTenSach.Text = "";
-                lblMaSach.Text = "";
-                lblGia.Text = "";
-                lblSLuong.Text = "";
-                lblNgayXB.Text = "";
-                lblTacGia.Text = "";
-                cmbHoTenHS.Text = "";
-                txtSoLuongMuon.Text = "";
-            }
-            catch
-            {
-                MessageBox.Show("Chưa đủ thông tin mượn sách", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                    enable(false);
+                    cmbTenSach.Text = "";
+                    lblMaSach.Text = "";
+                    lblGia.Text = "";
+                    lblSLuong.Text = "";
+                    lblNgayXB.Text = "";
+                    lblTacGia.Text = "";
+                    cmbHoTenHS.Text = "";
+                    txtSoLuongMuon.Text = "";
+                }
+                else
+                    MessageBox.Show("Vượt quá số lượng sách có trong kho.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Chưa đủ thông tin mượn sách", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void btnXemSach_Click(object sender, EventArgs e)
@@ -132,6 +139,35 @@ namespace WindowsFormsApplication1
         {
             DataTable chitiet = dt.sqlLayDuLieu("PSP_CTMuonSach_Select");
             dgvChitietMuon1.DataSource = chitiet;
+        }
+
+        private void dgvChitietMuon1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaMuon.Text = dgvChitietMuon1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtMaHS.Text = dgvChitietMuon1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtMaSach.Text = dgvChitietMuon1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            dtpNgayMuon.Text = dgvChitietMuon1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            dtpNgayHenTra.Text = dgvChitietMuon1.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void btnTraSach_Click(object sender, EventArgs e)
+        {
+            SqlParameter pa = new SqlParameter("@MaMuon",txtMaMuon.Text);
+            DataTable t = dt.sqlLayDuLieu("PSP_SLTra",pa);
+            if (Convert.ToInt32(txtSoLuong.Text) <= Convert.ToInt32(t.Rows[0]["SLMuon"].ToString()))
+            {
+                SqlParameter mamuon = new SqlParameter("@MaMuon", txtMaMuon.Text);
+                SqlParameter sltra = new SqlParameter("@SLTra", txtSoLuong.Text);
+                SqlParameter ngay = new SqlParameter("@NgayTra", dtpNgayTra.Text);
+                dt.sqlThucThi("PSP_Update_TraSach", mamuon, sltra, ngay);
+                btnLoad2_Click(sender, e);
+                txtSoLuong.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Số sách vượt quá số lượng đã mượn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSoLuong.Text = "";
+            }
         }
     }
 }

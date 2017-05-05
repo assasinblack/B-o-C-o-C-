@@ -254,6 +254,7 @@
             // 
             // colSachCon
             // 
+            this.colSachCon.DataPropertyName = "SLConLai";
             this.colSachCon.HeaderText = "Sách còn";
             this.colSachCon.Name = "colSachCon";
             // 

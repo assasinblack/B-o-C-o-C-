@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
                 sua.them = false;
                 sua.sach = this.sach;
                 sua.ShowDialog();
-                DataTable dulieu = dt.sqlLayDuLieu("PSP_Sach_Select");
+                DataTable dulieu = dt.sqlLayDuLieu("PSP_ThongKeSachCon");
                 dgvSach.DataSource = dulieu;
                 this.sach = null;
             }
@@ -60,8 +60,8 @@ namespace WindowsFormsApplication1
         KetNoiDT dt = new KetNoiDT();
         private void frm_quanlysach_Load(object sender, EventArgs e)
         {
-            DataTable dulieu = dt.sqlLayDuLieu("PSP_Sach_Select");
-            dgvSach.DataSource = dulieu;
+            DataTable slc = dt.sqlLayDuLieu("PSP_ThongKeSachCon");
+            dgvSach.DataSource = slc;
         }
 
         private void btnSeach_Click(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataTable dulieu = dt.sqlLayDuLieu("PSP_Sach_Select");
+            DataTable dulieu = dt.sqlLayDuLieu("PSP_ThongKeSachCon");
             dgvSach.DataSource = dulieu;
         }
 
