@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frrm_Theloaisach));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnthem = new System.Windows.Forms.ToolStripButton();
             this.btnsua = new System.Windows.Forms.ToolStripButton();
@@ -64,7 +63,7 @@
             // 
             // btnthem
             // 
-            this.btnthem.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.Image")));
+            this.btnthem.Image = global::WindowsFormsApplication1.Properties.Resources.Add_Filled_50;
             this.btnthem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(62, 22);
@@ -73,7 +72,7 @@
             // 
             // btnsua
             // 
-            this.btnsua.Image = ((System.Drawing.Image)(resources.GetObject("btnsua.Image")));
+            this.btnsua.Image = global::WindowsFormsApplication1.Properties.Resources.Edit_Property_Filled_50;
             this.btnsua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(51, 22);
@@ -82,7 +81,7 @@
             // 
             // btnxoa
             // 
-            this.btnxoa.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.Image")));
+            this.btnxoa.Image = global::WindowsFormsApplication1.Properties.Resources.Delete_Filled_50;
             this.btnxoa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(52, 22);
@@ -91,7 +90,7 @@
             // 
             // btnthoat
             // 
-            this.btnthoat.Image = ((System.Drawing.Image)(resources.GetObject("btnthoat.Image")));
+            this.btnthoat.Image = global::WindowsFormsApplication1.Properties.Resources.Exit_Filled_50;
             this.btnthoat.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnthoat.Name = "btnthoat";
             this.btnthoat.Size = new System.Drawing.Size(63, 22);
@@ -188,6 +187,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frrm_Theloaisach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frrm_Theloaisach";
             this.Load += new System.EventHandler(this.frrm_Theloaisach_Load);
             this.toolStrip1.ResumeLayout(false);

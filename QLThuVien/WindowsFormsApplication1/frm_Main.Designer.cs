@@ -76,7 +76,6 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.OldLace;
             this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.button1);
@@ -99,7 +98,7 @@
             this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button5.Image = global::WindowsFormsApplication1.Properties.Resources.Exit_Filled_50;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(569, 11);
+            this.button5.Location = new System.Drawing.Point(425, 11);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(128, 81);
             this.button5.TabIndex = 1;
@@ -171,6 +170,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.OldLace;
+            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.btnMuonTraSach);
             this.tabPage2.Controls.Add(this.btnSach);
             this.tabPage2.Controls.Add(this.btnTacGia);
@@ -292,16 +292,16 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlanchedAlmond;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button4.Image = global::WindowsFormsApplication1.Properties.Resources.Receive_Cash_Filled_50;
+            this.button4.Image = global::WindowsFormsApplication1.Properties.Resources.Exit_Filled_50;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(430, 11);
+            this.button4.Location = new System.Drawing.Point(664, 6);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 81);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Phân quyền";
+            this.button4.Size = new System.Drawing.Size(139, 90);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Thoát";
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // frm_Main
             // 

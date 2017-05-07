@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1.HeThong
       
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
         KetNoiDT dt = new KetNoiDT();
         private void bnttienhanh_Click(object sender, EventArgs e)
@@ -97,8 +97,7 @@ namespace WindowsFormsApplication1.HeThong
         FileDialog dl;
         private void bntgetlink_Click(object sender, EventArgs e)
         {
-            try
-            {
+
                 if (radiorestore.Checked == false && rdobackup.Checked == false)
                 {
                    
@@ -118,11 +117,6 @@ namespace WindowsFormsApplication1.HeThong
                 {
                     txtduongdan.Text = dl.FileName;
                 }
-            }
-            catch ()
-            {
-                MessageBox.Show("sdf ");
-            }
         }
     }
 }

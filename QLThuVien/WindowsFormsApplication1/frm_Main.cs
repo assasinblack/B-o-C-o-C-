@@ -29,11 +29,6 @@ namespace WindowsFormsApplication1
                 
                 button2.Enabled = false;
                 button3.Enabled = false;
-                button4.Enabled = false;
-             
-               
-                //btnMuonTraSach.Enabled = false;
-           
             }
         }
 
@@ -96,10 +91,9 @@ namespace WindowsFormsApplication1
             frm_dangky phuchoi = new frm_dangky();
             phuchoi.ShowDialog();
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
       
     }
