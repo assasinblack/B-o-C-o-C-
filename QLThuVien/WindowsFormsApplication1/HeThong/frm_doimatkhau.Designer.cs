@@ -57,6 +57,7 @@
             this.txtmkcu.Location = new System.Drawing.Point(185, 56);
             this.txtmkcu.Multiline = true;
             this.txtmkcu.Name = "txtmkcu";
+            this.txtmkcu.PasswordChar = '*';
             this.txtmkcu.Size = new System.Drawing.Size(228, 25);
             this.txtmkcu.TabIndex = 2;
             // 
@@ -66,6 +67,7 @@
             this.txtmkmoi.Location = new System.Drawing.Point(185, 100);
             this.txtmkmoi.Multiline = true;
             this.txtmkmoi.Name = "txtmkmoi";
+            this.txtmkmoi.PasswordChar = '*';
             this.txtmkmoi.Size = new System.Drawing.Size(228, 25);
             this.txtmkmoi.TabIndex = 3;
             // 
@@ -75,6 +77,7 @@
             this.txtnhaplaimkmoi.Location = new System.Drawing.Point(185, 144);
             this.txtnhaplaimkmoi.Multiline = true;
             this.txtnhaplaimkmoi.Name = "txtnhaplaimkmoi";
+            this.txtnhaplaimkmoi.PasswordChar = '*';
             this.txtnhaplaimkmoi.Size = new System.Drawing.Size(228, 25);
             this.txtnhaplaimkmoi.TabIndex = 4;
             // 

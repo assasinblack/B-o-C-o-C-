@@ -37,18 +37,19 @@ namespace WindowsFormsApplication1.HeThong
             if ( Matkhau() == true)
             {
                 MessageBox.Show(" Mật khẩu cũ không đúng!");
-            }
-            if (txtmkmoi.Text != txtnhaplaimkmoi.Text)
-            {
-                MessageBox.Show(" Mật khẩu mới không trùng khớp!");
-            }
-            if (txtmkmoi.Text == txtnhaplaimkmoi.Text && Matkhau() == false)
-            {
-                SqlParameter para1 = new SqlParameter("@TaiKhoan", lblTenTK.Text);
-                SqlParameter para2 = new SqlParameter("@MatKhau", txtmkmoi.Text);
-                dt.sqlThucThi("PSP_NhanVien_Update", para1, para2);
-                MessageBox.Show("Đổi mật khẩu thành công !");
-            }
+            }else if(txtmkmoi.Text.Length<3)
+                {
+                    MessageBox.Show(" Mật khẩu mới phải có tối thiểu 3 kí tự!");
+                }else  if (txtmkmoi.Text != txtnhaplaimkmoi.Text)
+                    {
+                        MessageBox.Show(" Mật khẩu mới không trùng khớp!");
+                    }else if (txtmkmoi.Text == txtnhaplaimkmoi.Text && Matkhau() == false)
+                        {
+                            SqlParameter para1 = new SqlParameter("@TaiKhoan", lblTenTK.Text);
+                            SqlParameter para2 = new SqlParameter("@MatKhau", txtmkmoi.Text);
+                            dt.sqlThucThi("PSP_NhanVien_Update", para1, para2);
+                            MessageBox.Show("Đổi mật khẩu thành công !");
+                        }
         }
 
         private void bntthoat_Click(object sender, EventArgs e)

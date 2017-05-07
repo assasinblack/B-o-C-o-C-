@@ -97,20 +97,31 @@ namespace WindowsFormsApplication1.HeThong
         FileDialog dl;
         private void bntgetlink_Click(object sender, EventArgs e)
         {
-            if (rdobackup.Checked == true)
+            try
             {
-                dl = new SaveFileDialog();
+                if (radiorestore.Checked == false && rdobackup.Checked == false)
+                {
+                   
+                }
+                else
+                    if (rdobackup.Checked == true)
+                    {
+                        dl = new SaveFileDialog();
+                    }
+                    else
+                    {
+                        dl = new OpenFileDialog();
+                    }
+                dl.Filter = "File  type (*.bak)|*.bak";
+                dl.DefaultExt = "bak";
+                if (dl.ShowDialog() == DialogResult.OK)
+                {
+                    txtduongdan.Text = dl.FileName;
+                }
             }
-            else
+            catch ()
             {
-                dl = new OpenFileDialog();
-            }
-            dl.Filter = "File  type (*.bak)|*.bak";
-            dl.DefaultExt = "bak";
-            if (dl.ShowDialog() == DialogResult.OK)
-
-            {
-                txtduongdan.Text = dl.FileName;
+                MessageBox.Show("sdf ");
             }
         }
     }
