@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThem = new System.Windows.Forms.Button();
             this.bntxoa = new System.Windows.Forms.Button();
             this.bntsua = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.dgvTacGia = new System.Windows.Forms.DataGridView();
             this.MaTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacGia)).BeginInit();
             this.SuspendLayout();
@@ -60,6 +62,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCyan;
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.bntxoa);
             this.panel1.Controls.Add(this.bntsua);
             this.panel1.Controls.Add(this.btnExit);
@@ -73,6 +77,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(759, 142);
             this.panel1.TabIndex = 3;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThem.Image = global::WindowsFormsApplication1.Properties.Resources.Add_Filled_50;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThem.Location = new System.Drawing.Point(41, 63);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(129, 65);
+            this.btnThem.TabIndex = 23;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // bntxoa
             // 
@@ -91,13 +109,13 @@
             // bntsua
             // 
             this.bntsua.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.bntsua.Image = global::WindowsFormsApplication1.Properties.Resources.Edit_Property_Filled_50;
+            this.bntsua.Image = global::WindowsFormsApplication1.Properties.Resources.Save_Filled_50;
             this.bntsua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntsua.Location = new System.Drawing.Point(215, 63);
+            this.bntsua.Location = new System.Drawing.Point(217, 63);
             this.bntsua.Name = "bntsua";
             this.bntsua.Size = new System.Drawing.Size(129, 65);
             this.bntsua.TabIndex = 21;
-            this.bntsua.Text = "Sửa";
+            this.bntsua.Text = "Lưu";
             this.bntsua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bntsua.UseVisualStyleBackColor = true;
             this.bntsua.Click += new System.EventHandler(this.bntsua_Click);
@@ -157,6 +175,7 @@
             this.txtMaTG.Name = "txtMaTG";
             this.txtMaTG.Size = new System.Drawing.Size(221, 29);
             this.txtMaTG.TabIndex = 16;
+            this.txtMaTG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaTG_KeyPress);
             // 
             // txtTenTG
             // 
@@ -197,6 +216,20 @@
             this.HoTenTG.HeaderText = "Họ tên tác giả";
             this.HoTenTG.Name = "HoTenTG";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnEdit.Image = global::WindowsFormsApplication1.Properties.Resources.Edit_Property_Filled_50;
+            this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.Location = new System.Drawing.Point(217, 63);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(129, 65);
+            this.btnEdit.TabIndex = 24;
+            this.btnEdit.Text = "Sửa";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // frm_quanlytacgia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -233,5 +266,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTenTG;
         private System.Windows.Forms.Button bntxoa;
         private System.Windows.Forms.Button bntsua;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
