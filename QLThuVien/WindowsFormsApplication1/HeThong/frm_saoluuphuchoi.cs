@@ -98,11 +98,8 @@ namespace WindowsFormsApplication1.HeThong
         private void bntgetlink_Click(object sender, EventArgs e)
         {
 
-                if (radiorestore.Checked == false && rdobackup.Checked == false)
-                {
-                   
-                }
-                else
+               
+          
                     if (rdobackup.Checked == true)
                     {
                         dl = new SaveFileDialog();
