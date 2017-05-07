@@ -58,6 +58,7 @@ namespace WindowsFormsApplication1
             if(frm_dangnhap.quyen.ToString() == "2")
             {
                 btnMoi.Enabled = btnTraSach.Enabled = false;
+                btnChoMuon.Enabled = btnTraSach.Enabled = false;
             }
         }
 

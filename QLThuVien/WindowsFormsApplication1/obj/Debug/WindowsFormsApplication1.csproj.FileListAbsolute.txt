@@ -75,3 +75,8 @@ C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplicatio
 C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\RdlCompile.compiled
 C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.frm_ChiTietQuaHan.resources
 C:\Users\HuyNguyen\Desktop\QLThuVien\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.frm_InSach.resources
+C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.frm_ChiTietMuonTra.resources
+C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.frm_ChiTietQuaHan.resources
+C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Report.frm_InSach.resources
+C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\RdlCompile.cache
+C:\Users\Khoa\Desktop\baocao\B-o-C-o-C-\QLThuVien\WindowsFormsApplication1\obj\Debug\RdlCompile.compiled

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
 
 using System.Data.SqlClient;
+using WindowsFormsApplication1.HeThong;
 
 namespace WindowsFormsApplication1
 {
@@ -27,6 +28,15 @@ namespace WindowsFormsApplication1
         {
             DataTable dulieu = dt.sqlLayDuLieu("PSP_HocSinh_Select");
             dgvQLHS.DataSource = dulieu;
+            if (frm_dangnhap.quyen.ToString() == "2")
+            {
+
+                btnCancel.Enabled = false;
+                btnThem.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+
+            }
             
         }
        

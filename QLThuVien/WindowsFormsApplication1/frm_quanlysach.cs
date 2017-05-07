@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
 using System.Data.SqlClient;
 using WindowsFormsApplication1.Report;
+using WindowsFormsApplication1.HeThong;
 
 namespace WindowsFormsApplication1
 {
@@ -63,6 +64,15 @@ namespace WindowsFormsApplication1
         {
             DataTable slc = dt.sqlLayDuLieu("PSP_ThongKeSachCon");
             dgvSach.DataSource = slc;
+            if (frm_dangnhap.quyen.ToString() == "2")
+            {
+
+                toolStripButton1.Enabled = false;
+                toolStripButton2.Enabled = false;
+                btnInDS.Enabled = false;
+                btnSeach.Enabled = false;
+
+            }
         }
 
         private void btnSeach_Click(object sender, EventArgs e)
