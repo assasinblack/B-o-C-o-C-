@@ -92,6 +92,7 @@
             // rdobackup
             // 
             this.rdobackup.AutoSize = true;
+            this.rdobackup.Checked = true;
             this.rdobackup.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdobackup.Location = new System.Drawing.Point(193, 152);
             this.rdobackup.Name = "rdobackup";
@@ -109,7 +110,6 @@
             this.radiorestore.Name = "radiorestore";
             this.radiorestore.Size = new System.Drawing.Size(92, 26);
             this.radiorestore.TabIndex = 9;
-            this.radiorestore.TabStop = true;
             this.radiorestore.Text = "Restore";
             this.radiorestore.UseVisualStyleBackColor = true;
             // 
@@ -141,6 +141,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frm_saoluuphuchoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup and Restore";
             this.ResumeLayout(false);
             this.PerformLayout();

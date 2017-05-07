@@ -68,10 +68,8 @@ namespace WindowsFormsApplication1
             {
 
                 toolStripButton1.Enabled = false;
-                toolStripButton2.Enabled = false;
-                btnInDS.Enabled = false;
-                btnSeach.Enabled = false;
-
+                toolStripButton2.Enabled = btnXoa.Enabled = false;
+                
             }
         }
 

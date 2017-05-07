@@ -52,7 +52,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(772, 51);
+            this.label1.Size = new System.Drawing.Size(759, 51);
             this.label1.TabIndex = 2;
             this.label1.Text = "QUẢN LÝ TÁC GIẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,7 +71,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(772, 142);
+            this.panel1.Size = new System.Drawing.Size(759, 142);
             this.panel1.TabIndex = 3;
             // 
             // bntxoa
@@ -179,7 +179,7 @@
             this.dgvTacGia.Name = "dgvTacGia";
             this.dgvTacGia.RowHeadersVisible = false;
             this.dgvTacGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTacGia.Size = new System.Drawing.Size(772, 336);
+            this.dgvTacGia.Size = new System.Drawing.Size(759, 289);
             this.dgvTacGia.TabIndex = 4;
             this.dgvTacGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTacGia_CellClick);
             // 
@@ -202,12 +202,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(772, 529);
+            this.ClientSize = new System.Drawing.Size(759, 482);
             this.Controls.Add(this.dgvTacGia);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Name = "frm_quanlytacgia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Tác Giả";
             this.Load += new System.EventHandler(this.frm_quanlytacgia_Load);
             this.panel1.ResumeLayout(false);

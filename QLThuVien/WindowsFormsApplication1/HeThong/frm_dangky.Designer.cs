@@ -170,6 +170,7 @@
             this.Controls.Add(this.txttaikhoan);
             this.Controls.Add(this.txthoten);
             this.Name = "frm_dangky";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng ký tài khoản";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -30,11 +30,7 @@ namespace WindowsFormsApplication1
             dgvQLHS.DataSource = dulieu;
             if (frm_dangnhap.quyen.ToString() == "2")
             {
-
-                btnCancel.Enabled = false;
-                btnThem.Enabled = false;
-                btnSua.Enabled = false;
-                btnXoa.Enabled = false;
+                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
 
             }
             

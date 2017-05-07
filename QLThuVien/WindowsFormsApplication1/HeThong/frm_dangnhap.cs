@@ -29,8 +29,7 @@ namespace WindowsFormsApplication1.HeThong
             SqlParameter para3 = new SqlParameter("@TaiKhoan", txtuser.Text);
             DataTable dulieu1 = dt.sqlLayDuLieu("PSP_NhanVien_Loai",para3);
 
-            quyen = dulieu1.Rows[0]["LoaiTK"].ToString();
-            tk = txtuser.Text;
+            
             
             if (dulieu.Rows.Count < 1)
             {
@@ -38,10 +37,13 @@ namespace WindowsFormsApplication1.HeThong
             }
             else
             {
-                  frm_Main frm = new frm_Main();
+                quyen = dulieu1.Rows[0]["LoaiTK"].ToString();
+                tk = txtuser.Text;
+                frm_Main frm = new frm_Main();
                 frm.Show();
                 this.Hide();
             }
+            
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
