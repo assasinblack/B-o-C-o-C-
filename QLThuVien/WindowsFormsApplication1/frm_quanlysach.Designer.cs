@@ -36,8 +36,9 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.btnXoa = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.btnInDS = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.colMaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -124,7 +125,8 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripButton3,
+            this.btnXoa,
+            this.btnInDS,
             this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -151,14 +153,14 @@
             this.toolStripButton2.Text = "Sửa Sách";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // toolStripButton3
+            // btnXoa
             // 
-            this.toolStripButton3.Image = global::WindowsFormsApplication1.Properties.Resources.Delete_Filled_50;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(96, 22);
-            this.toolStripButton3.Text = "Xoá Sách";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.btnXoa.Image = global::WindowsFormsApplication1.Properties.Resources.Delete_Filled_50;
+            this.btnXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(96, 22);
+            this.btnXoa.Text = "Xoá Sách";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // toolStripButton4
             // 
@@ -168,6 +170,15 @@
             this.toolStripButton4.Size = new System.Drawing.Size(70, 22);
             this.toolStripButton4.Text = "Thoát";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // btnInDS
+            // 
+            this.btnInDS.Image = global::WindowsFormsApplication1.Properties.Resources.Print_26;
+            this.btnInDS.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInDS.Name = "btnInDS";
+            this.btnInDS.Size = new System.Drawing.Size(126, 22);
+            this.btnInDS.Text = "In Danh Sách";
+            this.btnInDS.Click += new System.EventHandler(this.btnInDS_Click);
             // 
             // panel2
             // 
@@ -290,7 +301,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton btnXoa;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvSach;
@@ -304,6 +315,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colGiaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNgayXuatBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSachCon;
+        private System.Windows.Forms.ToolStripButton btnInDS;
 
     }
 }

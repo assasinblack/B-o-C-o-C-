@@ -62,20 +62,22 @@
             // 
             // txtpass
             // 
+            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpass.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtpass.Location = new System.Drawing.Point(121, 101);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(267, 29);
-            this.txtpass.TabIndex = 5;
+            this.txtpass.TabIndex = 1;
             // 
             // txtuser
             // 
+            this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtuser.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtuser.Location = new System.Drawing.Point(121, 57);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(267, 29);
-            this.txtuser.TabIndex = 4;
+            this.txtuser.TabIndex = 0;
             // 
             // bntdangnhap
             // 
@@ -83,7 +85,7 @@
             this.bntdangnhap.Location = new System.Drawing.Point(38, 147);
             this.bntdangnhap.Name = "bntdangnhap";
             this.bntdangnhap.Size = new System.Drawing.Size(147, 42);
-            this.bntdangnhap.TabIndex = 3;
+            this.bntdangnhap.TabIndex = 2;
             this.bntdangnhap.Text = "Đăng nhập";
             this.bntdangnhap.UseVisualStyleBackColor = true;
             this.bntdangnhap.Click += new System.EventHandler(this.bntdangnhap_Click);

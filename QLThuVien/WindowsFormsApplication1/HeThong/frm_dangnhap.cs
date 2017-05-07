@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1.HeThong
     public partial class frm_dangnhap : Form
     {
         public static string quyen;
+        public static string tk;
         public frm_dangnhap()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace WindowsFormsApplication1.HeThong
             DataTable dulieu1 = dt.sqlLayDuLieu("PSP_NhanVien_Loai",para3);
 
             quyen = dulieu1.Rows[0]["LoaiTK"].ToString();
+            tk = txtuser.Text;
             
             if (dulieu.Rows.Count < 1)
             {

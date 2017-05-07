@@ -34,6 +34,7 @@
             this.dgvChiTietMuon = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnChiTietMuonTra = new System.Windows.Forms.Button();
             this.lblMaHS = new System.Windows.Forms.Label();
             this.lblMaMuon = new System.Windows.Forms.Label();
             this.btnLoad1 = new System.Windows.Forms.Button();
@@ -75,15 +76,16 @@
             this.dtpNgayHenTra = new System.Windows.Forms.DateTimePicker();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
+            this.txtMaMuon = new System.Windows.Forms.TextBox();
             this.txtMaHS = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtMaMuon = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnQuaHan = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -159,6 +161,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox2.Controls.Add(this.btnChiTietMuonTra);
             this.groupBox2.Controls.Add(this.lblMaHS);
             this.groupBox2.Controls.Add(this.lblMaMuon);
             this.groupBox2.Controls.Add(this.btnLoad1);
@@ -180,6 +183,17 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin mượn";
+            // 
+            // btnChiTietMuonTra
+            // 
+            this.btnChiTietMuonTra.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnChiTietMuonTra.Location = new System.Drawing.Point(137, 277);
+            this.btnChiTietMuonTra.Name = "btnChiTietMuonTra";
+            this.btnChiTietMuonTra.Size = new System.Drawing.Size(220, 33);
+            this.btnChiTietMuonTra.TabIndex = 6;
+            this.btnChiTietMuonTra.Text = "In danh sách";
+            this.btnChiTietMuonTra.UseVisualStyleBackColor = true;
+            this.btnChiTietMuonTra.Click += new System.EventHandler(this.btnChiTietMuonTra_Click);
             // 
             // lblMaHS
             // 
@@ -526,6 +540,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox3.Controls.Add(this.btnQuaHan);
             this.groupBox3.Controls.Add(this.btnThoat2);
             this.groupBox3.Controls.Add(this.btnLoad2);
             this.groupBox3.Controls.Add(this.btnTraSach);
@@ -627,6 +642,13 @@
             this.txtMaSach.Size = new System.Drawing.Size(251, 26);
             this.txtMaSach.TabIndex = 2;
             // 
+            // txtMaMuon
+            // 
+            this.txtMaMuon.Location = new System.Drawing.Point(152, 46);
+            this.txtMaMuon.Name = "txtMaMuon";
+            this.txtMaMuon.Size = new System.Drawing.Size(251, 26);
+            this.txtMaMuon.TabIndex = 2;
+            // 
             // txtMaHS
             // 
             this.txtMaHS.Location = new System.Drawing.Point(152, 97);
@@ -689,17 +711,6 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Ngày mượn:";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(36, 100);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 20);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Mã học sinh:";
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -711,12 +722,27 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Mã mượn:";
             // 
-            // txtMaMuon
+            // label11
             // 
-            this.txtMaMuon.Location = new System.Drawing.Point(152, 46);
-            this.txtMaMuon.Name = "txtMaMuon";
-            this.txtMaMuon.Size = new System.Drawing.Size(251, 26);
-            this.txtMaMuon.TabIndex = 2;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(36, 100);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 20);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Mã học sinh:";
+            // 
+            // btnQuaHan
+            // 
+            this.btnQuaHan.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnQuaHan.Location = new System.Drawing.Point(593, 223);
+            this.btnQuaHan.Name = "btnQuaHan";
+            this.btnQuaHan.Size = new System.Drawing.Size(220, 33);
+            this.btnQuaHan.TabIndex = 7;
+            this.btnQuaHan.Text = "In danh sách quá hạn";
+            this.btnQuaHan.UseVisualStyleBackColor = true;
+            this.btnQuaHan.Click += new System.EventHandler(this.btnQuaHan_Click);
             // 
             // Frm_MuonTraSach
             // 
@@ -806,6 +832,8 @@
         private System.Windows.Forms.Label lblMaHS;
         private System.Windows.Forms.TextBox txtMaMuon;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnChiTietMuonTra;
+        private System.Windows.Forms.Button btnQuaHan;
 
 
     }

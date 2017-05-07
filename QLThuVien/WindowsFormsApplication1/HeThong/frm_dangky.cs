@@ -26,12 +26,29 @@ namespace WindowsFormsApplication1.HeThong
         KetNoiDT dt = new KetNoiDT();
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlParameter para1 = new SqlParameter("@HoTen", txthoten.Text);
-            SqlParameter para2 = new SqlParameter("@TaiKhoan", txttaikhoan.Text);
-            SqlParameter para3 = new SqlParameter("@MatKhau", txtmatkhau.Text);
-            SqlParameter para4 = new SqlParameter("@LoaiTK",int.Parse(cmbloaitk.Text));
-            dt.sqlThucThi("PSP_NhanVien_Insert", para1, para3, para2, para4);
+            SqlParameter chk = new SqlParameter("@TaiKhoan", txttaikhoan.Text);
+            DataTable check = dt.sqlLayDuLieu("PSP_CheckTaiKhoanTonTai", chk);
+            if(check.Rows[0]["TT"].ToString() == "0")
+            {
+                SqlParameter para1 = new SqlParameter("@HoTen", txthoten.Text);
+                SqlParameter para2 = new SqlParameter("@TaiKhoan", txttaikhoan.Text);
+                SqlParameter para3 = new SqlParameter("@MatKhau", txtmatkhau.Text);
+                SqlParameter para4 = new SqlParameter("@LoaiTK",int.Parse(cmbloaitk.Text));
+                dt.sqlThucThi("PSP_NhanVien_Insert", para1, para3, para2, para4);
+                MessageBox.Show("Đăng ký thành công.", "Complete", MessageBoxButtons.OK, MessageBoxIcon.None);
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Tài khoản đã tồn tại!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txttaikhoan.Focus();
+                txttaikhoan.Text = "";
+            }
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

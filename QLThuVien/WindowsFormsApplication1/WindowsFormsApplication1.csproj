@@ -32,8 +32,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -116,6 +119,29 @@
     <Compile Include="KetNoiDT.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_ChiTietMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_ChiTietMuonTra.Designer.cs">
+      <DependentUpon>frm_ChiTietMuonTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_ChiTietQuaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_ChiTietQuaHan.Designer.cs">
+      <DependentUpon>frm_ChiTietQuaHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\frm_InSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frm_InSach.Designer.cs">
+      <DependentUpon>frm_InSach.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +185,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\frm_ChiTietMuonTra.resx">
+      <DependentUpon>frm_ChiTietMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_ChiTietQuaHan.resx">
+      <DependentUpon>frm_ChiTietQuaHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frm_InSach.resx">
+      <DependentUpon>frm_InSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report1.rdlc" />
+    <EmbeddedResource Include="Report\Report2.rdlc" />
+    <EmbeddedResource Include="Report\Report3.rdlc" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -173,6 +211,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Resources\icon_idoit_change-01.png" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cancel-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print-26.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

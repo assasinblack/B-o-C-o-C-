@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
 
 using System.Data.SqlClient;
+using WindowsFormsApplication1.HeThong;
+using WindowsFormsApplication1.Report;
 
 namespace WindowsFormsApplication1
 {
@@ -51,6 +53,12 @@ namespace WindowsFormsApplication1
                 cmbTenSach.Items.Add(sach.Rows[sach.Rows.Count - i]["TenSach"].ToString());
             }
             txtMaHS.Enabled = txtMaSach.Enabled = txtMaMuon.Enabled = dtpNgayTra.Enabled = dtpNgayMuon.Enabled = dtpNgayHenTra.Enabled = false;
+            frm_dangnhap _login=new frm_dangnhap();
+
+            if(frm_dangnhap.quyen.ToString() == "2")
+            {
+                btnMoi.Enabled = btnTraSach.Enabled = false;
+            }
         }
 
         private void btnMoi_Click(object sender, EventArgs e)
@@ -168,6 +176,18 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Số sách vượt quá số lượng đã mượn.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtSoLuong.Text = "";
             }
+        }
+
+        private void btnChiTietMuonTra_Click(object sender, EventArgs e)
+        {
+            frm_ChiTietMuonTra muontra = new frm_ChiTietMuonTra();
+            muontra.ShowDialog();
+        }
+
+        private void btnQuaHan_Click(object sender, EventArgs e)
+        {
+            frm_ChiTietQuaHan quahan = new frm_ChiTietQuaHan();
+            quahan.ShowDialog();
         }
     }
 }

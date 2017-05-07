@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.HeThong;
+using WindowsFormsApplication1.Report;
 
 namespace WindowsFormsApplication1
 {
@@ -22,7 +23,7 @@ namespace WindowsFormsApplication1
 
 
 
-            Application.Run(new frm_quanlysach());
+            Application.Run(new frm_dangnhap());
 
           
 

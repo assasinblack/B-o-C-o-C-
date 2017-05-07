@@ -41,27 +41,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(78, 129);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.Size = new System.Drawing.Size(106, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đường dẫn:";
             // 
             // txtduongdan
             // 
-            this.txtduongdan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtduongdan.Location = new System.Drawing.Point(197, 129);
+            this.txtduongdan.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtduongdan.Location = new System.Drawing.Point(131, 71);
             this.txtduongdan.Name = "txtduongdan";
-            this.txtduongdan.Size = new System.Drawing.Size(240, 23);
+            this.txtduongdan.Size = new System.Drawing.Size(428, 29);
             this.txtduongdan.TabIndex = 1;
             // 
             // bnttienhanh
             // 
-            this.bnttienhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnttienhanh.Location = new System.Drawing.Point(65, 258);
+            this.bnttienhanh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnttienhanh.Location = new System.Drawing.Point(91, 199);
             this.bnttienhanh.Name = "bnttienhanh";
-            this.bnttienhanh.Size = new System.Drawing.Size(111, 30);
+            this.bnttienhanh.Size = new System.Drawing.Size(193, 39);
             this.bnttienhanh.TabIndex = 4;
             this.bnttienhanh.Text = "Tiến hành";
             this.bnttienhanh.UseVisualStyleBackColor = true;
@@ -69,10 +69,10 @@
             // 
             // bntrestore
             // 
-            this.bntrestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntrestore.Location = new System.Drawing.Point(239, 258);
+            this.bntrestore.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntrestore.Location = new System.Drawing.Point(326, 199);
             this.bntrestore.Name = "bntrestore";
-            this.bntrestore.Size = new System.Drawing.Size(111, 30);
+            this.bntrestore.Size = new System.Drawing.Size(193, 39);
             this.bntrestore.TabIndex = 5;
             this.bntrestore.Text = "Thoát";
             this.bntrestore.UseVisualStyleBackColor = true;
@@ -80,45 +80,47 @@
             // 
             // bntgetlink
             // 
-            this.bntgetlink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntgetlink.Location = new System.Drawing.Point(168, 166);
+            this.bntgetlink.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntgetlink.Location = new System.Drawing.Point(131, 106);
             this.bntgetlink.Name = "bntgetlink";
-            this.bntgetlink.Size = new System.Drawing.Size(111, 30);
+            this.bntgetlink.Size = new System.Drawing.Size(96, 30);
             this.bntgetlink.TabIndex = 6;
-            this.bntgetlink.Text = "get link";
+            this.bntgetlink.Text = "Lấy link";
             this.bntgetlink.UseVisualStyleBackColor = true;
             this.bntgetlink.Click += new System.EventHandler(this.bntgetlink_Click);
             // 
             // rdobackup
             // 
             this.rdobackup.AutoSize = true;
-            this.rdobackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdobackup.Location = new System.Drawing.Point(87, 202);
+            this.rdobackup.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdobackup.Location = new System.Drawing.Point(193, 152);
             this.rdobackup.Name = "rdobackup";
-            this.rdobackup.Size = new System.Drawing.Size(79, 24);
+            this.rdobackup.Size = new System.Drawing.Size(91, 26);
             this.rdobackup.TabIndex = 8;
             this.rdobackup.TabStop = true;
-            this.rdobackup.Text = "backup";
+            this.rdobackup.Text = "Backup";
             this.rdobackup.UseVisualStyleBackColor = true;
             // 
             // radiorestore
             // 
             this.radiorestore.AutoSize = true;
-            this.radiorestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiorestore.Location = new System.Drawing.Point(273, 202);
+            this.radiorestore.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiorestore.Location = new System.Drawing.Point(326, 152);
             this.radiorestore.Name = "radiorestore";
-            this.radiorestore.Size = new System.Drawing.Size(77, 24);
+            this.radiorestore.Size = new System.Drawing.Size(92, 26);
             this.radiorestore.TabIndex = 9;
             this.radiorestore.TabStop = true;
-            this.radiorestore.Text = "restore";
+            this.radiorestore.Text = "Restore";
             this.radiorestore.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 0);
+            this.label2.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(474, 44);
+            this.label2.Size = new System.Drawing.Size(586, 44);
             this.label2.TabIndex = 10;
             this.label2.Text = "BACKUP VÀ RESTORE";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 341);
+            this.ClientSize = new System.Drawing.Size(586, 272);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rdobackup);
             this.Controls.Add(this.radiorestore);
@@ -136,9 +138,10 @@
             this.Controls.Add(this.bnttienhanh);
             this.Controls.Add(this.txtduongdan);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frm_saoluuphuchoi";
-            this.Text = "frm_saoluuphuchoi";
-            this.Load += new System.EventHandler(this.frm_saoluuphuchoi_Load);
+            this.Text = "Backup and Restore";
             this.ResumeLayout(false);
             this.PerformLayout();
 

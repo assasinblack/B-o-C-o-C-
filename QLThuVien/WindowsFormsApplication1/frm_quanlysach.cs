@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TestThuVien.QLThuVienDTO;
 using System.Data.SqlClient;
+using WindowsFormsApplication1.Report;
 
 namespace WindowsFormsApplication1
 {
@@ -78,7 +79,7 @@ namespace WindowsFormsApplication1
             dgvSach.DataSource = dulieu;
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             try
             {
@@ -101,6 +102,12 @@ namespace WindowsFormsApplication1
         private void dgvSach_Click(object sender, EventArgs e)
         {
             setToDTOSach(dgvSach.CurrentRow);
+        }
+
+        private void btnInDS_Click(object sender, EventArgs e)
+        {
+            frm_InSach insach = new frm_InSach();
+            insach.ShowDialog();
         }
     }
 }

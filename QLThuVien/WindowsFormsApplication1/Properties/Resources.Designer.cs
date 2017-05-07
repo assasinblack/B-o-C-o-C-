@@ -223,6 +223,16 @@ namespace WindowsFormsApplication1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Print_26 {
+            get {
+                object obj = ResourceManager.GetObject("Print-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Receive_Cash_Filled_50 {
             get {
                 object obj = ResourceManager.GetObject("Receive Cash Filled-50", resourceCulture);

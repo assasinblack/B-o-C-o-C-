@@ -21,11 +21,6 @@ namespace WindowsFormsApplication1.HeThong
             InitializeComponent();
         }
       
-        private void frm_saoluuphuchoi_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
 

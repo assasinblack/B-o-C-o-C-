@@ -21,11 +21,7 @@ namespace WindowsFormsApplication1.HeThong
         KetNoiDT dt = new KetNoiDT();
         private void frm_doimatkhau_Load(object sender, EventArgs e)
         {
-            DataTable dulieu = dt.sqlLayDuLieu("PSP_NhanVien_Show");
-            for (int i = 1; i <= dulieu.Rows.Count; i++)
-            {
-                cmbtaikhoan.Items.Add(dulieu.Rows[dulieu.Rows.Count - i]["TaiKhoan"].ToString());
-            }
+            lblTenTK.Text = frm_dangnhap.tk.ToString();
         }
         private bool Matkhau()
         {
@@ -48,7 +44,7 @@ namespace WindowsFormsApplication1.HeThong
             }
             if (txtmkmoi.Text == txtnhaplaimkmoi.Text && Matkhau() == false)
             {
-                SqlParameter para1 = new SqlParameter("@TaiKhoan", cmbtaikhoan.Text);
+                SqlParameter para1 = new SqlParameter("@TaiKhoan", lblTenTK.Text);
                 SqlParameter para2 = new SqlParameter("@MatKhau", txtmkmoi.Text);
                 dt.sqlThucThi("PSP_NhanVien_Update", para1, para2);
                 MessageBox.Show("Đổi mật khẩu thành công !");
@@ -59,5 +55,6 @@ namespace WindowsFormsApplication1.HeThong
         {
             this.Close();
         }
+
     }
 }
